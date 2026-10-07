@@ -299,43 +299,163 @@ main{width:min(calc(100% - 40px),var(--max));margin:0 auto}
 .home-portals{
   position:relative;z-index:1;
   display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:12px;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:16px;
   margin-top:46px
 }
 .home-portal{
+  --portal:#8f86b8;
+  --portal-soft:#ddd7ef;
+  --portal-deep:#655d8d;
   position:relative;
-  min-height:190px;
-  padding:22px;
-  border:1px solid var(--line);
-  border-radius:22px;
-  background:color-mix(in srgb,var(--surface) 82%,transparent);
-  display:flex;flex-direction:column;justify-content:space-between;
+  min-height:215px;
+  padding:26px;
+  border:1px solid color-mix(in srgb,var(--portal) 24%,var(--line));
+  border-radius:26px;
+  background:
+    linear-gradient(145deg,
+      color-mix(in srgb,var(--surface) 92%,transparent),
+      color-mix(in srgb,var(--portal-soft) 18%,var(--surface)));
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
   overflow:hidden;
-  transition:transform .22s ease,border-color .22s ease,background .22s ease
+  isolation:isolate;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.18),
+    0 16px 42px rgba(28,27,40,.055);
+  transition:
+    transform .26s ease,
+    border-color .26s ease,
+    box-shadow .26s ease,
+    background .26s ease
+}
+.home-portal:nth-child(1){
+  --portal:#9288c6;
+  --portal-soft:#ded9f3;
+  --portal-deep:#686099
+}
+.home-portal:nth-child(2){
+  --portal:#c68fa3;
+  --portal-soft:#f2dde4;
+  --portal-deep:#916477
+}
+.home-portal:nth-child(3){
+  --portal:#78a69b;
+  --portal-soft:#d9ebe6;
+  --portal-deep:#527d73
+}
+.home-portal:nth-child(4){
+  --portal:#ba9a72;
+  --portal-soft:#eee1cf;
+  --portal-deep:#8b704e
+}
+[data-theme="dark"] .home-portal:nth-child(1){
+  --portal:#bbb1ef;
+  --portal-soft:#38334f;
+  --portal-deep:#d5cff7
+}
+[data-theme="dark"] .home-portal:nth-child(2){
+  --portal:#d9a6b8;
+  --portal-soft:#49333d;
+  --portal-deep:#efc4d1
+}
+[data-theme="dark"] .home-portal:nth-child(3){
+  --portal:#8fc3b7;
+  --portal-soft:#2d4842;
+  --portal-deep:#b6ded5
+}
+[data-theme="dark"] .home-portal:nth-child(4){
+  --portal:#d1b58f;
+  --portal-soft:#4a4032;
+  --portal-deep:#ead2b2
+}
+.home-portal::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:-2;
+  background:
+    radial-gradient(circle at 88% 12%,
+      color-mix(in srgb,var(--portal-soft) 92%,transparent) 0,
+      color-mix(in srgb,var(--portal-soft) 35%,transparent) 24%,
+      transparent 52%);
+  opacity:.88
 }
 .home-portal::after{
   content:"";
   position:absolute;
-  width:150px;height:150px;
-  right:-70px;bottom:-78px;
+  z-index:-1;
+  width:190px;height:190px;
+  right:-78px;bottom:-92px;
   border-radius:50%;
-  background:var(--accent-soft);
-  opacity:.44;
-  transition:transform .25s ease,opacity .25s ease
+  background:color-mix(in srgb,var(--portal-soft) 78%,transparent);
+  box-shadow:0 0 80px color-mix(in srgb,var(--portal) 20%,transparent);
+  opacity:.72;
+  transition:transform .32s ease,opacity .32s ease
 }
 .home-portal:hover{
-  transform:translateY(-4px);
-  border-color:color-mix(in srgb,var(--accent) 64%,var(--line));
-  background:var(--surface)
+  transform:translateY(-5px);
+  border-color:color-mix(in srgb,var(--portal) 62%,var(--line));
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.22),
+    0 22px 54px color-mix(in srgb,var(--portal) 13%,transparent)
 }
-.home-portal:hover::after{transform:scale(1.14);opacity:.7}
+.home-portal:hover::after{transform:scale(1.16);opacity:1}
 .portal-no,.portal-symbol,.home-portal>div,.portal-arrow{position:relative;z-index:1}
-.portal-no{color:var(--muted);font-size:10px;letter-spacing:.16em}
-.portal-symbol{position:absolute;right:20px;top:17px;color:var(--accent);font-size:27px}
-.home-portal h2{margin:0 0 7px;font:500 30px/1.1 Georgia,"Noto Serif SC",serif}
-.home-portal p{margin:0;max-width:220px;color:var(--muted);font-size:12px;line-height:1.65}
-.portal-arrow{align-self:flex-end;color:var(--accent);font-size:18px}
+.portal-no{
+  width:max-content;
+  padding:5px 9px;
+  border:1px solid color-mix(in srgb,var(--portal) 26%,var(--line));
+  border-radius:999px;
+  background:color-mix(in srgb,var(--surface) 64%,transparent);
+  color:color-mix(in srgb,var(--portal-deep) 78%,var(--text));
+  font-size:10px;
+  font-weight:900;
+  letter-spacing:.16em
+}
+.portal-symbol{
+  position:absolute;
+  right:24px;top:20px;
+  display:grid;place-items:center;
+  width:44px;height:44px;
+  border:1px solid color-mix(in srgb,var(--portal) 28%,var(--line));
+  border-radius:15px;
+  background:color-mix(in srgb,var(--surface) 68%,transparent);
+  color:var(--portal-deep);
+  font-size:23px;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.16)
+}
+.home-portal>div{margin-top:50px}
+.home-portal h2{
+  margin:0 0 9px;
+  color:color-mix(in srgb,var(--portal-deep) 34%,var(--text));
+  font:500 clamp(30px,3vw,42px)/1.08 Georgia,"Noto Serif SC",serif;
+  letter-spacing:-.025em
+}
+.home-portal p{
+  margin:0;
+  max-width:360px;
+  color:var(--muted);
+  font-size:13px;
+  line-height:1.72
+}
+.portal-arrow{
+  position:absolute;
+  right:22px;bottom:20px;
+  display:grid;place-items:center;
+  width:36px;height:36px;
+  border-radius:50%;
+  border:1px solid color-mix(in srgb,var(--portal) 30%,var(--line));
+  background:color-mix(in srgb,var(--surface) 66%,transparent);
+  color:var(--portal-deep);
+  font-size:16px;
+  transition:transform .22s ease,background .22s ease
+}
+.home-portal:hover .portal-arrow{
+  transform:translate(2px,-2px);
+  background:color-mix(in srgb,var(--portal-soft) 58%,var(--surface))
+}
 
 .shared-panel{
   display:grid;
