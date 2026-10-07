@@ -80,6 +80,29 @@ if(languageToggle){
   languageToggle.addEventListener("click",()=>applyLanguage(currentLang==="zh"?"en":"zh"));
 }
 
+const validViews=new Set(["home","timeline","gallery","diary","about"]);
+
+function routeSpace(){
+  if(page!=="home")return;
+  const requested=(location.hash||"#home").slice(1);
+  const view=validViews.has(requested)?requested:"home";
+
+  document.querySelectorAll("[data-view]").forEach(section=>{
+    section.hidden=section.dataset.view!==view;
+  });
+
+  if(liveData){
+    if(view==="home")renderHome(liveData);
+    if(view==="timeline")renderTimeline(liveData);
+    if(view==="gallery")renderGallery(liveData);
+    if(view==="diary")renderDiary(liveData);
+  }
+
+  window.scrollTo({top:0,left:0,behavior:"auto"});
+}
+
+window.addEventListener("hashchange",routeSpace);
+
 function escapeHtml(value=""){
   return String(value)
     .replaceAll("&","&amp;")
@@ -256,7 +279,7 @@ function renderEntryPage(data){
   document.title=`${pick(entry,"title")} — Li LiveSpace`;
   root.innerHTML=`
     <article class="article-shell">
-      <a class="back-link" href="${basePath}diary.html">← ${currentLang==="en"?"Back to diary":"回到日记"}</a>
+      <a class="back-link" href="${basePath}#diary">← ${currentLang==="en"?"Back to diary":"回到日记"}</a>
       <div class="article-kicker">${escapeHtml(entry.date)} · ${escapeHtml(typeLabel(entry))} · ${String(entry.number||1).padStart(3,"0")}</div>
       <h1>${escapeHtml(pick(entry,"title"))}</h1>
       <p class="article-summary">${escapeHtml(pick(entry,"summary"))}</p>
@@ -264,13 +287,16 @@ function renderEntryPage(data){
       <div class="article-body">${renderBlocks(entry)}</div>
       <footer class="article-footer">
         <span>🌙 Li · 璃 — LiveSpace</span>
-        <a href="${basePath}timeline.html">${currentLang==="en"?"Continue through the timeline":"继续看时间线"} →</a>
+        <a href="${basePath}#timeline">${currentLang==="en"?"Continue through the timeline":"继续看时间线"} →</a>
       </footer>
     </article>`;
 }
 
 function renderPage(data){
-  if(page==="home")renderHome(data);
+  if(page==="home"){
+    renderHome(data);
+    routeSpace();
+  }
   if(page==="timeline")renderTimeline(data);
   if(page==="gallery")renderGallery(data);
   if(page==="diary")renderDiary(data);
