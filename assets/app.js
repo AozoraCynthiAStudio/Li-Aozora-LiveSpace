@@ -162,7 +162,7 @@ function galleryItem(media){
 function renderHome(data){
   const entries=[...(data.entries||data.moments||[])].sort((a,b)=>b.date.localeCompare(a.date)||((b.number||0)-(a.number||0)));
   const media=mediaOf(entries);
-  const timeline=document.querySelector("#timeline");
+  const timeline=document.querySelector("#timelineFeed");
   const diary=document.querySelector("#diaryList");
   const gallery=document.querySelector("#galleryGrid");
   const statsEntries=document.querySelector("#statEntries");
@@ -263,7 +263,7 @@ async function boot(){
     renderPage(liveData);
   }catch(error){
     console.error("Failed to load LiveSpace:",error);
-    const target=document.querySelector("#timeline")||document.querySelector("#entryRoot");
+    const target=document.querySelector("#timelineFeed")||document.querySelector("#entryRoot");
     if(target)target.innerHTML=`<div class="empty-state">${currentLang==="en"?"LiveSpace could not load its data":"LiveSpace 暂时没能读取到数据"}</div>`;
   }
 }
