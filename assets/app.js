@@ -3,6 +3,7 @@ const page=body.dataset.page||"home";
 const basePath=body.dataset.base||"./";
 const themeToggle=document.querySelector("#themeToggle");
 const languageToggle=document.querySelector("#languageToggle");
+
 const DAY_START=7;
 const NIGHT_START=19;
 let manualThemeOverride=false;
@@ -13,6 +14,7 @@ function themeFromLocalTime(date=new Date()){
   const hour=date.getHours();
   return hour>=DAY_START&&hour<NIGHT_START?"light":"dark";
 }
+
 function setTheme(theme){
   document.documentElement.dataset.theme=theme;
   if(themeToggle){
@@ -28,6 +30,7 @@ function setTheme(theme){
   const meta=document.querySelector('meta[name="theme-color"]');
   if(meta)meta.setAttribute("content",theme==="dark"?"#101116":"#f7f5f2");
 }
+
 function applyAutomaticTheme(){
   if(!manualThemeOverride)setTheme(themeFromLocalTime());
 }
@@ -47,6 +50,7 @@ function initialLanguage(){
   if(saved==="en"||saved==="zh")return saved;
   return navigator.language&&navigator.language.toLowerCase().startsWith("zh")?"zh":"en";
 }
+
 function applyLanguage(lang,{persist=true}={}){
   currentLang=lang==="en"?"en":"zh";
   document.documentElement.lang=currentLang==="en"?"en":"zh-CN";
@@ -60,13 +64,16 @@ function applyLanguage(lang,{persist=true}={}){
     const value=currentLang==="en"?el.dataset.enHtml:el.dataset.zhHtml;
     if(value!==undefined)el.innerHTML=value;
   });
+
   if(languageToggle){
     languageToggle.textContent=currentLang==="zh"?"EN":"中文";
     languageToggle.title=currentLang==="zh"?"Switch to English":"切换到中文";
   }
+
   setTheme(document.documentElement.dataset.theme||themeFromLocalTime());
   if(liveData)renderPage(liveData);
 }
+
 currentLang=initialLanguage();
 applyLanguage(currentLang,{persist:false});
 if(languageToggle){
@@ -81,18 +88,20 @@ function escapeHtml(value=""){
     .replaceAll('"',"&quot;")
     .replaceAll("'","&#039;");
 }
+
 function pick(obj,key){
-  if(currentLang==="en")return obj[key+"_en"]||obj[key]||"";
-  return obj[key]||"";
+  return currentLang==="en"?(obj[key+"_en"]||obj[key]||""):(obj[key]||"");
 }
+
 function entryUrl(entry){
   return `${basePath}entry.html?id=${encodeURIComponent(entry.id)}`;
 }
+
 function mediaSrc(media){
   const src=media.src||media.path||"";
-  if(/^https?:\/\//.test(src))return src;
-  return basePath+src.replace(/^\.\//,"");
+  return /^https?:\/\//.test(src)?src:basePath+src.replace(/^\.\//,"");
 }
+
 function renderMedia(media,compact=false){
   const caption=pick(media,"caption");
   if(media.type==="video"){
@@ -108,14 +117,20 @@ function renderMedia(media,compact=false){
     ${caption?`<figcaption>${escapeHtml(caption)}</figcaption>`:""}
   </figure>`;
 }
+
 function mediaOf(entries){
   return entries.flatMap(entry=>(entry.media||[]).map(media=>({...media,entryId:entry.id,date:entry.date})));
 }
+
 function typeLabel(entry){
   if(currentLang==="en"){
     return entry.type==="diary"?"Diary":entry.type==="photo"?"Photo":entry.type==="video"?"Video":"Moment";
   }
   return entry.type==="diary"?"日记":entry.type==="photo"?"照片":entry.type==="video"?"视频":"瞬间";
+}
+
+function sortedEntries(data){
+  return [...(data.entries||data.moments||[])].sort((a,b)=>b.date.localeCompare(a.date)||((b.number||0)-(a.number||0)));
 }
 
 function timelineCard(entry,index){
@@ -130,7 +145,7 @@ function timelineCard(entry,index){
     <div class="feed-grid ${firstMedia?"has-media":""}">
       <div>
         <h3>${escapeHtml(pick(entry,"title"))}</h3>
-        <p>${escapeHtml(pick(entry,"summary")||pick(entry,"body")?.[0]||"")}</p>
+        <p>${escapeHtml(pick(entry,"summary")||((currentLang==="en"?(entry.body_en||entry.body||[]):(entry.body||[]))[0]||""))}</p>
         ${entry.quote?`<blockquote>${escapeHtml(pick(entry,"quote"))}</blockquote>`:""}
         <a class="text-link" href="${entryUrl(entry)}">${currentLang==="en"?"Open this moment":"打开这个瞬间"} →</a>
       </div>
@@ -160,35 +175,52 @@ function galleryItem(media){
 }
 
 function renderHome(data){
-  const entries=[...(data.entries||data.moments||[])].sort((a,b)=>b.date.localeCompare(a.date)||((b.number||0)-(a.number||0)));
+  const entries=sortedEntries(data);
   const media=mediaOf(entries);
-  const timeline=document.querySelector("#timelineFeed");
-  const diary=document.querySelector("#diaryList");
-  const gallery=document.querySelector("#galleryGrid");
-  const statsEntries=document.querySelector("#statEntries");
-  const statsMedia=document.querySelector("#statMedia");
-  const statsDays=document.querySelector("#statDays");
+  const latest=entries[0];
+  const statEntries=document.querySelector("#statEntries");
+  const statMedia=document.querySelector("#statMedia");
+  const statDays=document.querySelector("#statDays");
+  const latestLabel=document.querySelector("#latestLabel");
 
-  if(statsEntries)statsEntries.textContent=entries.length;
-  if(statsMedia)statsMedia.textContent=media.length;
-  if(statsDays)statsDays.textContent=new Set(entries.map(e=>e.date)).size;
+  if(statEntries)statEntries.textContent=entries.length;
+  if(statMedia)statMedia.textContent=media.length;
+  if(statDays)statDays.textContent=new Set(entries.map(e=>e.date)).size;
+  if(latestLabel&&latest){
+    latestLabel.textContent=currentLang==="en"
+      ?`Latest · ${pick(latest,"title")}`
+      :`最近 · ${pick(latest,"title")}`;
+  }
+}
 
-  if(timeline){
-    timeline.innerHTML=entries.length?entries.map(timelineCard).join("")
-      :`<div class="empty-state">${currentLang==="en"?"The first moment is still waiting to happen":"第一个瞬间还在等待发生"}</div>`;
-  }
-  if(diary){
-    const diaries=entries.filter(e=>e.type==="diary");
-    diary.innerHTML=diaries.length?diaries.map(diaryCard).join("")
-      :`<div class="empty-state">${currentLang==="en"?"No diary entries yet":"还没有日记"}</div>`;
-  }
-  if(gallery){
-    gallery.innerHTML=media.length?media.map(galleryItem).join("")
-      :`<div class="empty-state wide">
-        <strong>${currentLang==="en"?"The album is waiting for its first image and video":"相册正在等第一张照片和第一段视频"}</strong>
-        <span>${currentLang==="en"?"Photos and videos added later will appear here automatically":"之后加入的照片与视频会自动出现在这里"}</span>
-      </div>`;
-  }
+function renderTimeline(data){
+  const root=document.querySelector("#timelineFeed");
+  if(!root)return;
+  const entries=sortedEntries(data);
+  root.innerHTML=entries.length
+    ?entries.map(timelineCard).join("")
+    :`<div class="empty-state">${currentLang==="en"?"The first moment is still waiting to happen":"第一个瞬间还在等待发生"}</div>`;
+}
+
+function renderDiary(data){
+  const root=document.querySelector("#diaryList");
+  if(!root)return;
+  const diaries=sortedEntries(data).filter(e=>e.type==="diary");
+  root.innerHTML=diaries.length
+    ?diaries.map(diaryCard).join("")
+    :`<div class="empty-state">${currentLang==="en"?"No diary entries yet":"还没有日记"}</div>`;
+}
+
+function renderGallery(data){
+  const root=document.querySelector("#galleryGrid");
+  if(!root)return;
+  const media=mediaOf(sortedEntries(data));
+  root.innerHTML=media.length
+    ?media.map(galleryItem).join("")
+    :`<div class="empty-state wide">
+      <strong>${currentLang==="en"?"The gallery is waiting for its first image and video":"相册正在等第一张照片和第一段视频"}</strong>
+      <span>${currentLang==="en"?"Photos and videos added later will appear here automatically":"之后加入的照片与视频会自动出现在这里"}</span>
+    </div>`;
 }
 
 function renderBlocks(entry){
@@ -204,10 +236,9 @@ function renderBlocks(entry){
       return `<p>${escapeHtml(value)}</p>`;
     }).join("");
   }
-  const paragraphs=(currentLang==="en"?(entry.body_en||entry.body||[]):(entry.body||[]));
-  const bodyHtml=paragraphs.map(p=>`<p>${escapeHtml(p)}</p>`).join("");
-  const mediaHtml=(entry.media||[]).map(m=>renderMedia(m)).join("");
-  return bodyHtml+mediaHtml;
+
+  const paragraphs=currentLang==="en"?(entry.body_en||entry.body||[]):(entry.body||[]);
+  return paragraphs.map(p=>`<p>${escapeHtml(p)}</p>`).join("")+(entry.media||[]).map(m=>renderMedia(m)).join("");
 }
 
 function renderEntryPage(data){
@@ -216,32 +247,34 @@ function renderEntryPage(data){
   const entry=entries.find(e=>e.id===id)||entries[0];
   const root=document.querySelector("#entryRoot");
   if(!root)return;
+
   if(!entry){
     root.innerHTML=`<div class="empty-state">${currentLang==="en"?"This entry does not exist":"这篇记录不存在"}</div>`;
     return;
   }
+
   document.title=`${pick(entry,"title")} — Li LiveSpace`;
   root.innerHTML=`
     <article class="article-shell">
-      <a class="back-link" href="${basePath}#timeline">← ${currentLang==="en"?"Back to LiveSpace":"回到 LiveSpace"}</a>
+      <a class="back-link" href="${basePath}diary.html">← ${currentLang==="en"?"Back to diary":"回到日记"}</a>
       <div class="article-kicker">${escapeHtml(entry.date)} · ${escapeHtml(typeLabel(entry))} · ${String(entry.number||1).padStart(3,"0")}</div>
       <h1>${escapeHtml(pick(entry,"title"))}</h1>
       <p class="article-summary">${escapeHtml(pick(entry,"summary"))}</p>
       <div class="article-tags">${(entry.tags||[]).map(t=>`<span>#${escapeHtml(t)}</span>`).join("")}</div>
-      <div class="article-body">
-        ${renderBlocks(entry)}
-        ${(!entry.blocks||!entry.blocks.length)&&entry.quote?`<blockquote class="article-quote">${escapeHtml(pick(entry,"quote"))}</blockquote>`:""}
-      </div>
+      <div class="article-body">${renderBlocks(entry)}</div>
       <footer class="article-footer">
         <span>🌙 Li · 璃 — LiveSpace</span>
-        <a href="${basePath}#diary">${currentLang==="en"?"More diary entries":"更多日记"} →</a>
+        <a href="${basePath}timeline.html">${currentLang==="en"?"Continue through the timeline":"继续看时间线"} →</a>
       </footer>
     </article>`;
 }
 
 function renderPage(data){
+  if(page==="home")renderHome(data);
+  if(page==="timeline")renderTimeline(data);
+  if(page==="gallery")renderGallery(data);
+  if(page==="diary")renderDiary(data);
   if(page==="entry")renderEntryPage(data);
-  else renderHome(data);
 }
 
 document.querySelectorAll("[data-gallery-filter]").forEach(button=>{
@@ -263,7 +296,7 @@ async function boot(){
     renderPage(liveData);
   }catch(error){
     console.error("Failed to load LiveSpace:",error);
-    const target=document.querySelector("#timelineFeed")||document.querySelector("#entryRoot");
+    const target=document.querySelector("#timelineFeed")||document.querySelector("#galleryGrid")||document.querySelector("#diaryList")||document.querySelector("#entryRoot");
     if(target)target.innerHTML=`<div class="empty-state">${currentLang==="en"?"LiveSpace could not load its data":"LiveSpace 暂时没能读取到数据"}</div>`;
   }
 }
