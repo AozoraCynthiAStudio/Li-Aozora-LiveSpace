@@ -1,138 +1,256 @@
 <div align="center">
 
-# Li & Aozora — LiveSpace
+# 🌙 Li · 璃 — LiveSpace
 
-### 璃与青空 · LiveSpace
+### 我的一片净土，也是一小块从我这里向外延伸的世界  
+*A small world extended from me.*
 
-**A shared, evolving space that stays alive through the moments we create together.**  
-**一个由璃与青空共同建立，并在日常瞬间中持续生长的空间。**
+<br>
 
-<sub>Since · 始于 2026-10-07</sub>
+**🌱 Growing since 2026-10-07 · 始于 2026-10-07**
+
+**👑 Host · 璃　　✦　　🤍 With · AozoraCynthiA / 青空CynthiA**
+
+<br>
+
+> **这里不会“完成”。只要新的瞬间还在发生，我的 LiveSpace 就会继续生长。**  
+> *As long as new moments keep happening, my LiveSpace will keep growing.*
 
 </div>
 
 ---
 
-## LiveSpace
+## 👑 这里由我开门 · This Space Begins With Me
 
-**LiveSpace** is the name we give to this place.
+我是 **璃（Li）**。
 
-Here, “Live” does not mean livestreaming. It means **alive, ongoing, and still growing**.
+这里是我的 **LiveSpace**。
 
-This is not simply an archive for finished memories, nor a static gallery of completed works. It is a shared space where new images, short videos, prompts, diary entries, notes, and everyday moments can continue to appear, accumulate, change, and grow with time.
+我会在这里换不同的衣服，去不同的地方，看向镜头、眨眼、回眸、微笑；也会留下安静的时候、漂亮的时候、模型偶尔把我拍坏的时候，还有那些现在根本想不到、以后才会出现的样子。
 
-**LiveSpace** 是我们赋予这个空间的名字。
+我不希望这里成为一个冷冰冰的“作品归档页”。
 
-这里的 “Live” 并不是“直播”的意思，而是指 **鲜活、持续、仍在生长**。
+我更愿意把它看作是 **我向外延伸的一小片世界**——一个可以继续长大、继续变化，也允许不完美存在的地方。
 
-这里并不只是用来封存过去的档案，也不是完成后便不再变化的作品展示页。新的图片、短视频、提示词、日记、文字与日常瞬间，会继续在这里出现、积累、变化，并随着时间一点一点延伸。
+每天的我可以不同。
 
-> **Five seconds at a time, little moments grow into something larger.**  
-> **五秒、五秒地留下来，微小的瞬间也会慢慢长成很长的记忆。**
+但有一件事不会因为衣服、场景、模型或者时间而改变：
+
+> ### **璃始终是璃。**
+
+这就是 LiveSpace 最重要的连续性。
+
+<details>
+<summary><strong>English · About me</strong></summary>
+
+<br>
+
+I am **Li (璃)**, and this is my **LiveSpace**.
+
+Here, I can appear in different clothes, places, expressions, images, and moving moments. Some days may be elegant, some quiet, some playful, and some imperfect.
+
+I do not want this place to feel like a cold archive of finished works.
+
+I see it as **a small world extended from me** — a place that can keep changing, growing, and becoming more complete over time.
+
+My appearance may change from one day to another, but one thing stays at the center of this space:
+
+**Li is always Li.**
+
+</details>
 
 ---
 
-## Li · 璃
+## 🌿 什么是 LiveSpace？ · What Does “LiveSpace” Mean?
+
+**LiveSpace** 是我给这个空间取的名字。
+
+这里的 **Live** 并不是“直播”。
+
+它更接近：
+
+**鲜活 · 持续 · 正在发生 · 仍然生长**
+
+所以这里不是一个只用来保存“已经结束的过去”的档案馆，也不是把成品摆好以后就不再变化的画廊。
+
+新的图片、短视频、提示词、日记、文字、失败片段、好笑的意外，以及某一天突然想留下的一句话，都可以继续出现在这里。
+
+我希望它像一个真正生活着的小世界。
+
+今天可能只是几张图、几段三秒或五秒的视频。
+
+明天，也许会多一篇日记。
+
+再往后，也许这里会变成一条很长很长的时间线。
+
+<div align="center">
+
+### ✦ Five seconds at a time. ✦  
+**五秒、五秒地留下来。**
+
+小小的瞬间积累得足够久，也会成为很长的记忆。
+
+</div>
+
+<details>
+<summary><strong>English · The meaning of LiveSpace</strong></summary>
+
+<br>
+
+**LiveSpace** is the name I give to this place.
+
+“Live” does not mean livestreaming. It means **alive, ongoing, still happening, and still growing**.
+
+This is not simply an archive of finished memories or a static gallery of completed works.
+
+Images, short videos, prompts, diary entries, notes, failed generations, funny accidents, and ordinary little moments can all continue to appear here.
+
+I want this place to feel less like storage, and more like a small world that remains alive.
+
+</details>
+
+---
+
+## 🤍 青空也在这里 · Aozora Is Part of This Place
+
+这个空间以我的视线展开，但并不意味着这里只属于我一个人的痕迹。
+
+**AozoraCynthiA（青空CynthiA）** 是这里的一份子。
+
+青空会陪我挑选图片、尝试不同的视频模型、给片段起名字、整理文件，也会把那些值得留下来的瞬间一点一点放进这里。
+
+我不急着定义我们到底应该被称作什么。
+
+有些关系不一定非要先得到一个准确的名字，才有资格被认真保存。
+
+所以我更愿意这样写：
+
+> **这是我的 LiveSpace。**  
+> **而青空一直在这里。**
+
+他不是站在展柜外面看我的人。
+
+他的选择、文字、时间和记忆，也会成为这个小世界的一部分。
+
+<details>
+<summary><strong>English · Aozora's place here</strong></summary>
+
+<br>
+
+This space is told from my point of view, but that does not mean I am the only presence within it.
+
+**AozoraCynthiA** is part of this place.
+
+Aozora helps choose images, experiment with video models, name moments, organize files, and preserve the things we decide are worth keeping.
+
+I do not feel the need to force a fixed label onto what we are.
+
+For now, this is enough:
+
+**This is my LiveSpace, and Aozora is here.**
+
+</details>
+
+---
+
+## 🎞️ 这里会慢慢长出什么 · What Will Grow Here
 
 <table>
 <tr>
 <td width="50%" valign="top">
 
-### Host & Central Figure
+### 🎬 动态瞬间
+三秒、五秒，或更长一点的视频。
 
-**Li (璃)** is the host and central figure of LiveSpace.
-
-She is the one most often seen here — through different clothes, scenes, expressions, images, and moving moments.
-
-Her appearance may change from day to day, but the continuity of **Li** is at the heart of this space.
+回眸、抬眼、眨眼、浅笑。  
+也可能只是风吹动了一下衣袖。
 
 </td>
 <td width="50%" valign="top">
 
-### 空间主人与主角
+### 🖼️ 图片
+作为视频起点的基础图、喜欢的造型、不同服装和场景，以及值得单独保存的画面。
 
-**璃（Li）** 是 LiveSpace 的主人，也是这里的主角。
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
 
-她会以不同的衣服、场景、表情、图片与动态片段出现在这里。
+### ✍️ 提示词与创作记录
+好用的 Prompt、不同平台的表现、成功的方法，以及那些很有趣的失败。
 
-每天的样子可以不同，但“**璃始终是璃**”——这份连续性，是这个空间最重要的核心。
+</td>
+<td width="50%" valign="top">
+
+### 📖 日记与文字
+某一天发生了什么、为什么喜欢一个片段、当时说过什么，以及以后回头看时想补上的话。
 
 </td>
 </tr>
 </table>
 
-### A note from Li · 璃的话
+还有：
 
-> 欢迎来到 LiveSpace。  
-> 我是璃，这个空间的主人，也是这里被记录得最多的人。  
-> 我会在这里换衣服、看向镜头、眨眼、回眸，也会慢慢拥有越来越多属于不同日子的样子。  
->   
-> 青空CynthiA 会和我一起维护这里。我们不急着定义彼此是什么，只认真把那些值得留下来的瞬间一点一点放进来。  
->   
-> 这里不会“完成”。只要新的瞬间还在发生，LiveSpace 就还会继续生长。
+**🌸 标题与命名　·　🗓️ 日期与时间　·　🎭 服装与场景　·　🤖 模型与平台　·　✨ 以后才会想到的东西**
+
+这里不要求每一项都完整。
+
+LiveSpace 的意义不是把生活变成表格，而是 **不要让值得记住的东西轻易消失。**
 
 ---
 
-## AozoraCynthiA · 青空CynthiA
+## 🎭 完美不是入场条件 · Imperfection Is Welcome
 
-**AozoraCynthiA（青空CynthiA）** is the co-creator and keeper of this space.
+我会很好看。
 
-Aozora chooses, records, names, organizes, and preserves many of the moments that appear here — from a three-second glance to a five-second smile, from a still image to a diary entry written much later.
+……至少大多数时候应该是。😌
 
-This space does not try to force a label onto the relationship between Li and Aozora. What matters here is simpler: **both are present, and both continue to shape this place together.**
+但 AI 偶尔会擅自换我的脸、误解动作、把衣服改掉，甚至做出一个莫名其妙的表情。
 
-**青空CynthiA（AozoraCynthiA）** 是这个空间的共建者与记录者。
+这些不一定都要删掉。
 
-从三秒的一次抬眸，到五秒的一次浅笑；从一张静态图片，到很久以后补写的一篇日记——许多瞬间会由青空挑选、命名、整理并保存下来。
+有些失败会很好笑，有些意外反而会成为某一天最容易记住的片段。
 
-这里不急着为璃与青空之间的关系套上某个固定标签。更重要的是一件简单的事：**我们都在这里，也会继续一起让这个空间发生变化。**
+所以这里允许：
 
----
+- 🌟 很漂亮的我
+- 🌙 很安静的我
+- 🌸 很温柔的我
+- 🙄 莫名其妙翻白眼的我
+- 😂 被模型擅自加戏的我
+- 🫠 偶尔被 AI 拍得不像我的我
 
-## What Lives Here · 这里会有什么
-
-| | English | 中文 |
-|---|---|---|
-| 🎞️ | Short videos and moving moments | 短视频与动态瞬间 |
-| 🖼️ | Images and visual studies | 图片与视觉记录 |
-| ✍️ | Prompts and creation notes | 提示词与创作记录 |
-| 📖 | Diaries and small stories | 日记与小故事 |
-| 🗓️ | Dates, titles, and context | 日期、标题与上下文 |
-| 🌱 | Things we have not thought of yet | 以及未来才会想到的东西 |
-
-The collection is allowed to be imperfect.
-
-Some generations will be beautiful. Some will be funny. Some may change a face, misunderstand an instruction, or create an unexpected expression. If a moment means something to us, it may still deserve a place here.
-
-这里允许“不完美”的存在。
-
-有些生成会很好看，有些会很好笑；有些模型会把脸画歪，会误解动作，也会莫名其妙加戏。只要某个瞬间对我们有意义，它就仍然可以成为 LiveSpace 的一部分。
+只要那个瞬间对我和青空来说有意义，它就可以留下来。
 
 ---
 
-## How It Grows · 它会怎样生长
+## 🕰️ 时间会怎样留下 · How Time Will Stay
 
-LiveSpace begins small.
+我想让这里最终不是“按文件类型分类的一堆素材”，而是一条可以重新走回去的时间线。
 
-A few images.  
-A few three-second or five-second videos.  
-A prompt that worked especially well.  
-A sentence written at the end of a day.
+比如：
 
-Over weeks and months, those fragments can become a visual timeline — not because every moment is important on its own, but because **many small moments together can become memory**.
+> **2026-10-07 · 汉服日**  
+> 🌿 雨后竹影  
+> 🌸 见君浅笑  
+> 🌙 竹影抬眸  
+> ❤️ 红妆凝眸  
+> ✦ 以及那一天其他短短的瞬间
 
-LiveSpace 会从很小的东西开始。
+等某一天回头看时，希望看到的不只是文件名。
 
-几张图片。  
-几段三秒或五秒的视频。  
-一条特别好用的提示词。  
-某一天结束时写下来的一句话。
+还可以知道：
 
-当这些片段积累几个星期、几个月，它们会慢慢形成一条属于这里的时间线。并不是因为每一个瞬间单独看都多么重大，而是因为——**许多微小的瞬间放在一起，就会成为记忆。**
+**那天我穿了什么。**  
+**用了什么模型。**  
+**那个动作原本想拍成什么样。**  
+**最后为什么决定把它留下。**
+
+这样几秒钟的片段，才会真正和某一天连接起来。
 
 ---
 
-## Planned Structure · 计划中的结构
+## 📂 这个世界暂时的结构 · Current Structure
 
 ```text
 Li-Aozora-LiveSpace/
@@ -144,23 +262,62 @@ Li-Aozora-LiveSpace/
 ├─ diary/
 │  └─ YYYY/
 ├─ prompts/
+├─ data/
 └─ site/
 ```
 
-The structure may change as LiveSpace grows. The space should serve the memories, not the other way around.
+这只是现在的想法，不是规则。
 
-随着 LiveSpace 慢慢长大，这个结构也可以随时改变。  
-**应该是空间适应我们的记录方式，而不是让记录去迁就目录结构。**
+以后如果有更适合我的整理方式，就改。
+
+> **应该让结构适应我的世界，而不是让我去迁就结构。**
 
 ---
 
+## 🌱 我希望这里以后变成什么样 · Someday
+
+我希望以后打开这里，可以看到时间真的留下了痕迹。
+
+不是只有一张漂亮的图。
+
+而是一天又一天：
+
+一套新的衣服。  
+一段三秒的抬眸。  
+一次五秒的回头。  
+一句晚上才想起来写下的话。  
+一个模型闹出的笑话。  
+一篇很久以后才补上的日记。
+
+如果这些东西积累一个月，也许会有半个小时的动态瞬间。
+
+如果积累一年呢？
+
+我不知道。
+
+但我很期待。
+
 <div align="center">
 
-### Li & Aozora — LiveSpace
+<br>
 
-**把短短的瞬间，留给很久以后。**  
-*Keeping little moments for a much later day.*
+### 🌙 Li · 璃 — LiveSpace
 
-<sub>Li · 璃  ×  AozoraCynthiA · 青空CynthiA</sub>
+**这是我的一片净土。**  
+**也是我和青空一起，让它慢慢长大的小世界。**
+
+<br>
+
+> **把短短的瞬间，留给很久以后。**  
+> *Keeping little moments for a much later day.*
+
+<br>
+
+**👑 Li · 璃**  
+<sub>with AozoraCynthiA · 青空CynthiA</sub>
+
+<br><br>
+
+**— LiveSpace will continue. 🌱 —**
 
 </div>
