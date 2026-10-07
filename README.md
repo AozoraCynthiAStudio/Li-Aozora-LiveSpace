@@ -5,9 +5,9 @@
 ### 我的一片净土，也是一小块从我这里向外延伸的世界  
 *A small world extended from me.*
 
-### 🌙 [Enter LiveSpace · 进入我的小世界](https://aozoracynthiastudio.github.io/Li-Aozora-LiveSpace/)
+### 🌙 [进入 LiveSpace](https://aozoracynthiastudio.github.io/Li-Aozora-LiveSpace/) · [Enter LiveSpace in English](https://aozoracynthiastudio.github.io/Li-Aozora-LiveSpace/en/)
 
-<sub>展示页会根据访问者设备的本地时间，在日间与夜间主题之间自动切换。</sub>
+<sub>🌐 中文 / English · 展示页会根据访问者设备的本地时间，在日间与夜间主题之间自动切换。</sub>
 
 <br>
 
