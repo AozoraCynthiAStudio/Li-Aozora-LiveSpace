@@ -230,7 +230,7 @@ function renderEntryPage(data){
       <div class="article-tags">${(entry.tags||[]).map(t=>`<span>#${escapeHtml(t)}</span>`).join("")}</div>
       <div class="article-body">
         ${renderBlocks(entry)}
-        ${entry.quote?`<blockquote class="article-quote">${escapeHtml(pick(entry,"quote"))}</blockquote>`:""}
+        ${(!entry.blocks||!entry.blocks.length)&&entry.quote?`<blockquote class="article-quote">${escapeHtml(pick(entry,"quote"))}</blockquote>`:""}
       </div>
       <footer class="article-footer">
         <span>🌙 Li · 璃 — LiveSpace</span>
