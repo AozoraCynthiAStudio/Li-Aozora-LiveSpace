@@ -2327,3 +2327,121 @@ main{width:min(calc(100% - 40px),var(--max));margin:0 auto}
     font-size:19px;
   }
 }
+
+
+/* --- One arrow language: thin, quiet, editorial --- */
+.arrow-icon{
+  display:block;
+  width:18px;
+  height:18px;
+  flex:0 0 auto;
+  fill:none;
+  stroke:currentColor;
+  stroke-width:1.55;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  overflow:visible;
+}
+.portal-enter{
+  position:absolute;
+  z-index:3;
+  right:22px;
+  bottom:20px;
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:8px 11px 8px 13px;
+  border:1px solid color-mix(in srgb,var(--portal) 24%,var(--line));
+  border-radius:999px;
+  background:color-mix(in srgb,var(--surface) 60%,transparent);
+  color:color-mix(in srgb,var(--portal-deep) 80%,var(--text));
+  backdrop-filter:blur(12px);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.18);
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:.08em;
+  transition:transform .22s ease,background .22s ease,border-color .22s ease;
+}
+.portal-enter .arrow-icon{
+  width:15px;
+  height:15px;
+  transition:transform .22s ease;
+}
+.home-portal:hover .portal-enter{
+  transform:translateY(-2px);
+  border-color:color-mix(in srgb,var(--portal) 44%,var(--line));
+  background:color-mix(in srgb,var(--portal-soft) 40%,var(--surface));
+}
+.home-portal:hover .portal-enter .arrow-icon{
+  transform:translate(2px,-2px);
+}
+
+.threshold-arrow{
+  border:0;
+  background:transparent;
+  box-shadow:none;
+  width:auto;
+  height:auto;
+  border-radius:0;
+  color:var(--accent);
+}
+.threshold-arrow .arrow-icon{
+  width:34px;
+  height:34px;
+  stroke-width:1.3;
+  transition:transform .22s ease;
+}
+.threshold-entry:hover .threshold-arrow{
+  transform:none;
+  background:transparent;
+}
+.threshold-entry:hover .threshold-arrow .arrow-icon{
+  transform:translateX(4px);
+}
+
+.page-back,
+.back-link,
+.text-link,
+.article-next{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+}
+.page-back .arrow-icon,
+.back-link .arrow-icon{
+  width:16px;
+  height:16px;
+  transition:transform .18s ease;
+}
+.page-back:hover .arrow-icon,
+.back-link:hover .arrow-icon{
+  transform:translateX(-3px);
+}
+.text-link .arrow-icon,
+.article-next .arrow-icon{
+  width:16px;
+  height:16px;
+  transition:transform .18s ease;
+}
+.text-link:hover .arrow-icon,
+.article-next:hover .arrow-icon{
+  transform:translateX(3px);
+}
+
+@media(max-width:760px){
+  .portal-enter{
+    right:12px;
+    bottom:12px;
+    gap:6px;
+    padding:6px 8px 6px 10px;
+    font-size:8px;
+  }
+  .portal-enter .arrow-icon{
+    width:13px;
+    height:13px;
+  }
+  .threshold-arrow .arrow-icon{
+    width:28px;
+    height:28px;
+  }
+}
