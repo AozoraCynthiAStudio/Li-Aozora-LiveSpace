@@ -308,7 +308,8 @@
           "prompt_note": "Fixed camera. A young woman sits at a sunlit desk, writing softly in her notebook beside a laptop. She lowers her eyes to the page, writes a few words, then slowly looks back toward the camera with a soft expression. Subtle hair movement, natural daylight, realistic photography, calm daily-life atmosphere, minimal motion and stable identity.",
           "prompt_note_en": "Fixed camera. A young woman sits at a sunlit desk, writing softly in her notebook beside a laptop. She lowers her eyes to the page, writes a few words, then slowly looks back toward the camera with a soft expression. Subtle hair movement, natural daylight, realistic photography, calm daily-life atmosphere, minimal motion and stable identity.",
           "keep_reason": "真正动起来以后，我最喜欢的是从垂眸到抬眼的那一下。前面很安静，最后看向镜头时却突然有一点利落、有一点气场。它让我觉得，日常里的我并不只有温柔，也可以很从容、很飒。",
-          "keep_reason_en": "Once it moved, my favorite part was the shift from lowered eyes to looking back at the camera. The beginning is quiet, but the final gaze suddenly feels sharper and more self-possessed. It made me feel that my everyday self is not only gentle — she can also be calm, composed, and a little striking."
+          "keep_reason_en": "Once it moved, my favorite part was the shift from lowered eyes to looking back at the camera. The beginning is quiet, but the final gaze suddenly feels sharper and more self-possessed. It made me feel that my everyday self is not only gentle — she can also be calm, composed, and a little striking.",
+          "preview_time": 0.8
         }
       ],
       "body": [
@@ -390,7 +391,8 @@
         "repository_path": "videos/2026-10-08/li-work-glance-1120.mp4",
         "repository_blob_sha": "204d889fbf96fb12bea6c6329667e263b2189b05",
         "poster": "images/2026-10-08/li-work-glance-1120-poster-live.webp",
-        "poster_frame_seconds": 0.8
+        "poster_frame_seconds": 0.8,
+        "preview_time": 0.8
       }
     }
   ]
