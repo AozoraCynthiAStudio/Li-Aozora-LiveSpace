@@ -91,6 +91,12 @@ function routeSpace(){
     section.hidden=section.dataset.view!==view;
   });
 
+  document.querySelectorAll("[data-mobile-view]").forEach(link=>{
+    const active=link.dataset.mobileView===view;
+    if(active)link.setAttribute("aria-current","page");
+    else link.removeAttribute("aria-current");
+  });
+
   if(liveData){
     if(view==="home")renderHome(liveData);
     if(view==="timeline")renderTimeline(liveData);
