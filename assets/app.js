@@ -244,15 +244,41 @@ function galleryItem(media){
 function renderHome(data){
   const entries=sortedEntries(data);
   const media=mediaOf(entries);
+  const diaries=entries.filter(e=>e.type==="diary");
   const latest=entries[0];
   const statEntries=document.querySelector("#statEntries");
   const statMedia=document.querySelector("#statMedia");
   const statDays=document.querySelector("#statDays");
   const latestLabel=document.querySelector("#latestLabel");
+  const recentTimeline=document.querySelector("#homeRecentTimeline");
+  const galleryStat=document.querySelector("#homeGalleryStat");
+  const diaryStat=document.querySelector("#homeDiaryStat");
 
   if(statEntries)statEntries.textContent=entries.length;
   if(statMedia)statMedia.textContent=media.length;
   if(statDays)statDays.textContent=new Set(entries.map(e=>e.date)).size;
+
+  if(recentTimeline){
+    const recent=entries.slice(0,3);
+    recentTimeline.innerHTML=recent.map(entry=>`
+      <li>
+        <time>${escapeHtml(entry.date.replaceAll("-","."))}</time>
+        <strong>${escapeHtml(pick(entry,"title"))}</strong>
+      </li>`).join("");
+  }
+
+  if(galleryStat){
+    galleryStat.textContent=currentLang==="en"
+      ?`${String(media.length).padStart(2,"0")} VISUAL ${media.length===1?"MEMORY":"MEMORIES"}`
+      :`${String(media.length).padStart(2,"0")} 段影像记忆`;
+  }
+
+  if(diaryStat){
+    diaryStat.textContent=currentLang==="en"
+      ?`${String(diaries.length).padStart(2,"0")} DIARY ${diaries.length===1?"ENTRY":"ENTRIES"}`
+      :`${String(diaries.length).padStart(2,"0")} 篇日记`;
+  }
+
   if(latestLabel&&latest){
     latestLabel.textContent=currentLang==="en"
       ?`Latest · ${pick(latest,"title")}`
