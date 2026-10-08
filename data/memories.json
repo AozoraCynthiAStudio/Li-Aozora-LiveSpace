@@ -158,7 +158,13 @@
           "poster": "images/2026-10-07/li-blossom-window.webp",
           "caption": "春庭花影 · 窗边轻望",
           "caption_en": "Blossom Window · A Quiet Glance",
-          "date": "2026-10-07"
+          "date": "2026-10-07",
+          "generator": "待补记",
+          "generator_en": "To be recorded",
+          "prompt_note": "窗边花影里轻轻抬眸，保持自然微笑，让发丝、衣袖和光线只有很小的变化。",
+          "prompt_note_en": "A quiet glance by the blossom-lit window, keeping the smile natural and the hair, sleeves, and light in gentle motion.",
+          "keep_reason": "春庭的光很柔，动作也没有抢走画面的安静感；它很像一段不经意被留下来的日常。",
+          "keep_reason_en": "The courtyard light stays soft and the motion never overwhelms the stillness. It feels like an ordinary moment that happened to be kept."
         },
         {
           "id": "hanfu-2",
@@ -167,7 +173,13 @@
           "poster": "images/2026-10-07/li-bamboo-fan.webp",
           "caption": "竹影团扇 · 一点清静",
           "caption_en": "Bamboo & Fan · A Quiet Pause",
-          "date": "2026-10-07"
+          "date": "2026-10-07",
+          "generator": "WAN 3.0",
+          "generator_en": "WAN 3.0",
+          "prompt_note": "先垂眸看扇，再抬眼看向镜头；动作克制，尽量保持团扇、衣裙与人物稳定。",
+          "prompt_note_en": "Look down at the round fan, then lift the eyes toward the camera; keep the motion restrained and the fan, clothing, and identity stable.",
+          "keep_reason": "短短几秒里，团扇和衣裙都很稳，抬眼的动作也很干净。我喜欢它那种雨后竹影里的安静。",
+          "keep_reason_en": "In only a few seconds, the fan and clothing stay remarkably stable and the upward glance is clean. I like its quiet, post-rain bamboo mood."
         },
         {
           "id": "hanfu-3",
@@ -176,7 +188,13 @@
           "poster": "images/2026-10-07/li-rain-teal.webp",
           "caption": "雨后青衣 · 廊下微光",
           "caption_en": "After Rain · Teal in the Corridor",
-          "date": "2026-10-07"
+          "date": "2026-10-07",
+          "generator": "待补记",
+          "generator_en": "To be recorded",
+          "prompt_note": "雨后廊下的青衣轻轻动起来，保留一点风、湿润的光和安静呼吸感，不做夸张动作。",
+          "prompt_note_en": "Let the teal hanfu move gently in the corridor after rain, keeping a hint of breeze, wet light, and quiet breathing without exaggerated motion.",
+          "keep_reason": "这一段不是靠动作取胜，而是靠廊下的微光和青衣的层次。我想把这种很淡的情绪也留下来。",
+          "keep_reason_en": "This one works less through action than through corridor light and layered teal fabric. I wanted to keep that very faint mood too."
         },
         {
           "id": "hanfu-4",
@@ -185,7 +203,13 @@
           "poster": "images/2026-10-07/li-wisteria-turn.webp",
           "caption": "紫藤月门 · 回身",
           "caption_en": "Wisteria Moon Gate · Turning Back",
-          "date": "2026-10-07"
+          "date": "2026-10-07",
+          "generator": "Vidu",
+          "generator_en": "Vidu",
+          "prompt_note": "轻触流苏后回身看向镜头，最后留一点浅笑；让发丝、纱袖与团扇自然稳定。",
+          "prompt_note_en": "Touch the tassel, turn back toward the camera, and finish with a faint smile; keep the hair, gauze sleeves, and round fan naturally stable.",
+          "keep_reason": "回身很自然，发丝和纱袖也没有乱掉。它是我很喜欢的那种——有动作，但仍然像一张会呼吸的照片。",
+          "keep_reason_en": "The turn feels natural and the hair and gauze sleeves stay composed. It has the kind of motion I like: movement, but still almost a photograph that breathes."
         },
         {
           "id": "hanfu-5",
@@ -194,7 +218,13 @@
           "poster": "images/2026-10-07/li-spring-smile.webp",
           "caption": "春庭花影 · 见君浅笑",
           "caption_en": "Spring Courtyard · A Small Smile",
-          "date": "2026-10-07"
+          "date": "2026-10-07",
+          "generator": "Vidu",
+          "generator_en": "Vidu",
+          "prompt_note": "垂眸，慢慢抬脸，再看向镜头微笑；保持坐姿、裙摆和长发稳定。",
+          "prompt_note_en": "Lower the gaze, slowly raise the face, then look into the camera and smile; keep the seated pose, skirt, and long hair stable.",
+          "keep_reason": "垂眸到抬脸再到浅笑，情绪变化很清楚，而且人物和裙摆都很稳。那天我把它当作收藏冠军。",
+          "keep_reason_en": "The shift from lowered eyes to raised face to a small smile is clear, while the character and skirt stay stable. It was my favorite clip of the day."
         }
       ],
       "blocks": [
