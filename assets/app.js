@@ -142,17 +142,28 @@ function mediaSrc(media){
 
 function renderMedia(media,compact=false){
   const caption=pick(media,"caption");
+  const src=escapeHtml(mediaSrc(media));
+  const poster=media.poster?escapeHtml(mediaSrc({src:media.poster})):"";
+  const backdrop=poster||src;
+
   if(media.type==="video"){
     return `<figure class="media-item ${compact?"compact":""}">
-      <video controls preload="metadata" ${media.poster?`poster="${escapeHtml(mediaSrc({src:media.poster}))}"`:""}>
-        <source src="${escapeHtml(mediaSrc(media))}">
-      </video>
+      <div class="media-stage">
+        ${backdrop?`<img class="media-stage-backdrop" src="${backdrop}" alt="" aria-hidden="true" loading="lazy">`:""}
+        <video class="media-visual" controls preload="metadata" ${poster?`poster="${poster}"`:""}>
+          <source src="${src}">
+        </video>
+      </div>
       ${!compact&&caption?`<figcaption>${escapeHtml(caption)}</figcaption>`:""}
       ${!compact?renderMemoryNote(media,false):""}
     </figure>`;
   }
+
   return `<figure class="media-item ${compact?"compact":""}">
-    <img src="${escapeHtml(mediaSrc(media))}" alt="${escapeHtml(caption||pick(media,"alt")||"LiveSpace image")}" loading="lazy">
+    <div class="media-stage">
+      <img class="media-stage-backdrop" src="${src}" alt="" aria-hidden="true" loading="lazy">
+      <img class="media-visual" src="${src}" alt="${escapeHtml(caption||pick(media,"alt")||"LiveSpace image")}" loading="lazy">
+    </div>
     ${!compact&&caption?`<figcaption>${escapeHtml(caption)}</figcaption>`:""}
     ${!compact?renderMemoryNote(media,false):""}
   </figure>`;
