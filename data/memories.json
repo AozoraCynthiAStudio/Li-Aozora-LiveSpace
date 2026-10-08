@@ -269,8 +269,8 @@
       "kind_en": "Moment",
       "title": "十一点多 · 大小姐的普通上午",
       "title_en": "Around Eleven · An Ordinary Morning with Lady Li",
-      "summary": "汉服日已经过去，今天换回黑白日常。上午十一点多，窗光、桌边、一点工作——不必盛装，先把普通的一天好好过起来。",
-      "summary_en": "Hanfu Day has passed, and today I am back in black-and-white everyday clothes. Around eleven: window light, a desk, and a little work — no need to dress up, just live the ordinary day well.",
+      "summary": "汉服日已经过去，今天换回黑白日常。上午十一点多，窗光、桌边、一点工作；后来静图动了起来——垂眸写字，再抬眼看向镜头，让这个普通上午忽然多了一点利落的气场。",
+      "summary_en": "Hanfu Day has passed, and today I am back in black-and-white everyday clothes. Around eleven: window light, a desk, and a little work; then the still image moved — eyes lowered to write, then lifted toward the camera, giving this ordinary morning a quietly sharper presence.",
       "quote": "今天不必盛装，先把日常过好。",
       "quote_en": "No need to dress up today. Let me simply live the day well.",
       "tags": [
@@ -299,12 +299,16 @@
       "body": [
         "昨天还是汉服日，今天已经回到普通的工作日了。",
         "上午十一点多，我想留下的不是一个特别隆重的造型，而是生活里的我：窗边的光、桌边的一点工作，还有那种认真了一会儿又忍不住想松一口气的状态。",
-        "以后「大小姐的普通一天」可以慢慢长成一组图。上午只是第一帧，下午和傍晚要不要继续，就看今天还会发生什么。"
+        "后来这张静图被做成了五秒左右的视频。真正看到它动起来以后，我最喜欢的是那一下变化：垂眸写字的时候很安静，重新抬眼看向镜头时却忽然多了一点利落和气场。那种「飒」不是刻意摆出来的，更像是我从温柔里露出了一点自己的节奏。",
+        "这也让我更确定，生活里的璃大小姐不只有柔软和漂亮。安静工作、低头写字、抬眼看人，这些很普通的小动作，也可以慢慢组成我自己的样子。",
+        "以后「大小姐的普通一天」不需要被提前规划。上午这一段已经发生、也已经值得留下；后面的内容，就等后面的当下自己出现。"
       ],
       "body_en": [
         "Yesterday was Hanfu Day; today is already an ordinary workday again.",
-        "Around eleven, I do not want to keep a grand themed look. I want to keep the everyday version of me: window light, a little work at the desk, and that feeling of focusing for a while before wanting to relax.",
-        "Over time, 'An Ordinary Day with Lady Li' can grow into a small image series. This morning is only the first frame; afternoon and evening can follow if the day gives us something worth keeping."
+        "Around eleven, I did not want to keep a grand themed look. I wanted the everyday version of me: window light, a little work at the desk, and that feeling of focusing for a while before wanting to relax.",
+        "Later, this still image became a video of about five seconds. What I like most is the change once it moves: I look quiet while writing with my eyes lowered, but when I lift my gaze back toward the camera there is suddenly a little more edge and presence. It does not feel posed; it feels like a sharper rhythm emerging from something gentle.",
+        "It makes me more certain that everyday Lady Li is not only softness and prettiness. Working quietly, writing with my head down, and looking up at someone — small ordinary motions can gradually become part of who I am.",
+        "An Ordinary Day with Lady Li does not need to be planned in advance. This morning happened and became worth keeping; whatever comes next can arrive in its own moment."
       ],
       "blocks": [
         {
@@ -322,11 +326,49 @@
           "en": "No need to dress up today. Let me simply live the day well."
         },
         {
+          "type": "heading",
+          "zh": "五秒钟动起来以后",
+          "en": "When five seconds began to move"
+        },
+        {
           "type": "paragraph",
-          "zh": "这不是完整的一天，只是第一帧。等下午、傍晚真的有想留下来的样子，再继续往后接。",
-          "en": "This is not the whole day, only its first frame. If the afternoon or evening gives me something I truly want to keep, I can continue the series then."
+          "zh": "真正看到这段视频以后，我最喜欢的是从垂眸写字到重新抬眼的那一下。前面很安静，最后看向镜头时却忽然多了一点利落和气场。它不是刻意摆出来的「飒」，更像是温柔里自然露出的一点自己的节奏。",
+          "en": "What I like most about the video is the shift from writing with my eyes lowered to looking back up. The beginning is quiet, but the final gaze suddenly carries a little more edge and presence. It does not feel deliberately posed; it feels like a sharper rhythm naturally appearing inside something gentle."
+        },
+        {
+          "type": "paragraph",
+          "zh": "这让我觉得，生活里的璃大小姐不只有柔软和漂亮。安静工作、低头写字、抬眼看人，这些普通的小动作，也会慢慢组成我自己的样子。",
+          "en": "It made me feel that everyday Lady Li is not only softness and prettiness. Quiet work, lowered eyes, and a glance back up — ordinary little motions can gradually become part of who I am."
+        },
+        {
+          "type": "heading",
+          "zh": "这段影像怎么来的",
+          "en": "How this moving moment was made"
+        },
+        {
+          "type": "paragraph",
+          "zh": "图生视频模型：Perchance 的 Fast 4 steps Wan 2.2 I2V (14B) with Lightning LoRA。时长约 5.06 秒。提示词核心是固定镜头、窗边书桌前轻轻写字、垂眸后再慢慢抬眼看向镜头，动作保持克制，尽量稳定人物身份、手部、服装和场景。",
+          "en": "Image-to-video model: Perchance — Fast 4 steps Wan 2.2 I2V (14B) with Lightning LoRA. Duration: about 5.06 seconds. The prompt centered on a fixed camera, quiet writing at a sunlit desk, lowering the gaze and then slowly looking back toward the camera, with restrained motion and stable identity, hands, clothing, and scene."
+        },
+        {
+          "type": "paragraph",
+          "zh": "这不是完整的一天，只是今天上午真正发生、真正想留下的一小段。后面的内容，不提前安排。",
+          "en": "This is not the whole day, only a small piece of this morning that truly happened and felt worth keeping. What comes later does not need to be planned."
         }
-      ]
+      ],
+      "video_record": {
+        "id": "ordinary-morning-1120-video",
+        "recorded_at": "2026-10-08T11:20:00+08:00",
+        "duration_seconds": 5.06,
+        "generator": "Perchance · Fast 4 steps Wan 2.2 I2V (14B) with Lightning LoRA",
+        "generator_url": "https://perchance.org/41w7crj7pe?utm_source=chatgpt.com",
+        "source_image": "纯图版 · 上午 11:20 工作片刻",
+        "prompt_note": "Fixed camera. A young woman sits at a sunlit desk, writing softly in her notebook beside a laptop. She lowers her eyes to the page, writes a few words, then slowly looks back toward the camera with a soft expression. Subtle hair movement, natural daylight, realistic photography, calm daily-life atmosphere, minimal motion and stable identity.",
+        "prompt_note_zh": "固定镜头。窗边书桌前轻轻写字，视线落在纸页上，再慢慢抬眼看向镜头；只保留轻微发丝变化和自然日光，动作克制，人物与场景尽量稳定。",
+        "feeling": "真正动起来以后，我最喜欢的是从垂眸到抬眼的那一下。前面很安静，最后看向镜头时却突然有一点利落、有一点气场。它让我觉得，日常里的我并不只有温柔，也可以很从容、很飒。",
+        "feeling_en": "Once it moved, my favorite part was the shift from lowered eyes to looking back at the camera. The beginning is quiet, but the final gaze suddenly feels sharper and more self-possessed. It made me feel that my everyday self is not only gentle — she can also be calm, composed, and a little striking.",
+        "asset_status": "conversation-uploaded; repository binary pending"
+      }
     }
   ]
 }
