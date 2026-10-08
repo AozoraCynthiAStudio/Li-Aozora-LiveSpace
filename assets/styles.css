@@ -1535,3 +1535,153 @@ main{width:min(calc(100% - 40px),var(--max));margin:0 auto}
     scroll-margin-top:78px;
   }
 }
+
+
+/* --- A foyer that breathes: recent memories inside Time --- */
+.home-hero-panel{
+  padding-bottom:clamp(36px,4.4vw,56px);
+}
+.home-portals-three .portal-time{
+  min-height:252px;
+}
+.home-portals-three .portal-time>.portal-body{
+  display:grid;
+  grid-template-columns:minmax(0,1.05fr) minmax(280px,.95fr);
+  gap:clamp(34px,5vw,72px);
+  align-items:end;
+  width:100%;
+  margin-top:58px;
+}
+.home-portals-three .portal-time .portal-copy{
+  margin:0;
+}
+.portal-recent{
+  position:relative;
+  align-self:stretch;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+  min-height:118px;
+  padding:0 72px 2px 24px;
+  border-left:1px solid color-mix(in srgb,var(--portal) 24%,var(--line));
+}
+.portal-recent::before{
+  content:"";
+  position:absolute;
+  left:-4px;
+  top:9px;
+  width:7px;
+  height:7px;
+  border-radius:50%;
+  background:color-mix(in srgb,var(--portal-deep) 70%,var(--surface));
+  box-shadow:0 0 0 5px color-mix(in srgb,var(--portal-soft) 34%,transparent);
+}
+.portal-recent-label{
+  display:block;
+  margin-bottom:9px;
+  color:color-mix(in srgb,var(--portal-deep) 72%,var(--muted));
+  font-size:9px;
+  font-weight:900;
+  letter-spacing:.16em;
+}
+.portal-recent ol{
+  display:grid;
+  gap:7px;
+  margin:0;
+  padding:0;
+  list-style:none;
+}
+.portal-recent li{
+  display:grid;
+  grid-template-columns:88px minmax(0,1fr);
+  gap:12px;
+  align-items:baseline;
+  min-width:0;
+}
+.portal-recent time{
+  color:var(--muted);
+  font-size:10px;
+  letter-spacing:.04em;
+}
+.portal-recent strong{
+  min-width:0;
+  overflow:hidden;
+  color:color-mix(in srgb,var(--text) 88%,var(--portal-deep));
+  font:500 13px/1.45 Georgia,"Noto Serif SC",serif;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+.portal-stat{
+  display:block;
+  width:max-content;
+  max-width:calc(100% - 42px);
+  margin-top:18px;
+  padding-top:9px;
+  border-top:1px solid color-mix(in srgb,var(--portal) 18%,var(--line));
+  color:color-mix(in srgb,var(--portal-deep) 70%,var(--muted));
+  font-size:9px;
+  font-weight:900;
+  letter-spacing:.13em;
+}
+.home-portals-three>.home-portal:not(.portal-time){
+  min-height:210px;
+}
+
+@media(max-width:900px){
+  .home-portals-three .portal-time>.portal-body{
+    grid-template-columns:1fr;
+    gap:18px;
+    margin-top:52px;
+  }
+  .portal-recent{
+    min-height:auto;
+    padding:15px 48px 0 0;
+    border-left:0;
+    border-top:1px solid color-mix(in srgb,var(--portal) 22%,var(--line));
+  }
+  .portal-recent::before{
+    left:0;
+    top:-4px;
+  }
+}
+
+@media(max-width:760px){
+  .home-hero-panel{
+    padding-bottom:20px;
+  }
+  .home-portals-three .portal-time{
+    min-height:218px;
+  }
+  .home-portals-three .portal-time>.portal-body{
+    gap:13px;
+    margin-top:42px;
+  }
+  .portal-recent{
+    padding:11px 36px 0 0;
+  }
+  .portal-recent-label{
+    margin-bottom:6px;
+    font-size:7px;
+  }
+  .portal-recent ol{
+    gap:4px;
+  }
+  .portal-recent li{
+    grid-template-columns:68px minmax(0,1fr);
+    gap:8px;
+  }
+  .portal-recent time{
+    font-size:8px;
+  }
+  .portal-recent strong{
+    font-size:10px;
+  }
+  .portal-stat{
+    margin-top:11px;
+    padding-top:6px;
+    font-size:7px;
+  }
+  .home-portals-three>.home-portal:not(.portal-time){
+    min-height:154px;
+  }
+}
