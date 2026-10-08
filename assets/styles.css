@@ -1489,3 +1489,49 @@ main{width:min(calc(100% - 40px),var(--max));margin:0 auto}
     grid-template-columns:78px minmax(0,1fr);
   }
 }
+
+
+/* --- Three-room LiveSpace architecture --- */
+.home-portals.home-portals-three{
+  grid-template-columns:repeat(2,minmax(0,1fr));
+}
+.home-portals-three .home-portal:first-child{
+  grid-column:1 / -1;
+  min-height:245px;
+}
+.home-portals-three .home-portal:first-child>div{
+  margin-top:70px;
+}
+.home-portals-three .home-portal:first-child h2{
+  font-size:clamp(38px,4vw,54px);
+}
+.home-portals-three .home-portal:first-child p{
+  max-width:520px;
+  font-size:14px;
+}
+#home-about{
+  scroll-margin-top:105px;
+}
+
+@media(max-width:760px){
+  .home-portals.home-portals-three{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+  .home-portals-three .home-portal:first-child{
+    grid-column:1 / -1;
+    min-height:164px;
+  }
+  .home-portals-three .home-portal:first-child>div{
+    margin-top:40px;
+  }
+  .home-portals-three .home-portal:first-child h2{
+    font-size:29px;
+  }
+  .home-portals-three .home-portal:first-child p{
+    max-width:230px;
+    font-size:10px;
+  }
+  #home-about{
+    scroll-margin-top:78px;
+  }
+}
