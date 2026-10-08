@@ -118,6 +118,15 @@ function routeSpace(){
 
 window.addEventListener("hashchange",routeSpace);
 
+function arrowIcon(direction="right"){
+  const path=direction==="left"
+    ?'<path d="M19 12H6"></path><path d="m10 7-5 5 5 5"></path>'
+    :direction==="up-right"
+      ?'<path d="M7 17 17 7"></path><path d="M9 7h8v8"></path>'
+      :'<path d="M5 12h13"></path><path d="m14 7 5 5-5 5"></path>';
+  return `<svg class="arrow-icon arrow-${direction}" viewBox="0 0 24 24" aria-hidden="true">${path}</svg>`;
+}
+
 function escapeHtml(value=""){
   return String(value)
     .replaceAll("&","&amp;")
@@ -242,7 +251,7 @@ function timelineCard(entry,index){
         <h3>${escapeHtml(pick(entry,"title"))}</h3>
         <p>${escapeHtml(pick(entry,"summary")||((currentLang==="en"?(entry.body_en||entry.body||[]):(entry.body||[]))[0]||""))}</p>
         ${entry.quote?`<blockquote>${escapeHtml(pick(entry,"quote"))}</blockquote>`:""}
-        <a class="text-link" href="${entryUrl(entry)}">${currentLang==="en"?"Open this moment":"打开这个瞬间"} →</a>
+        <a class="text-link" href="${entryUrl(entry)}"><span>${currentLang==="en"?"Open this moment":"打开这个瞬间"}</span>${arrowIcon("right")}</a>
       </div>
       ${firstMedia?`<div class="feed-media">${renderTimelinePreview(firstMedia,entry)}</div>`:""}
     </div>
@@ -254,7 +263,7 @@ function diaryCard(entry){
     <span class="diary-date">${escapeHtml(entry.date)}</span>
     <h3>${escapeHtml(pick(entry,"title"))}</h3>
     <p>${escapeHtml(pick(entry,"summary"))}</p>
-    <span class="text-link">${currentLang==="en"?"Read entry":"阅读日记"} →</span>
+    <span class="text-link"><span>${currentLang==="en"?"Read entry":"阅读日记"}</span>${arrowIcon("right")}</span>
   </a>`;
 }
 
@@ -379,7 +388,7 @@ function renderEntryPage(data){
   document.title=`${pick(entry,"title")} — Li LiveSpace`;
   root.innerHTML=`
     <article class="article-shell">
-      <a class="back-link" href="${basePath}#diary">← ${currentLang==="en"?"Back to diary":"回到日记"}</a>
+      <a class="back-link" href="${basePath}#diary">${arrowIcon("left")}<span>${currentLang==="en"?"Back to diary":"回到日记"}</span></a>
       <div class="article-kicker">${escapeHtml(entry.date)} · ${escapeHtml(typeLabel(entry))} · ${String(entry.number||1).padStart(3,"0")}</div>
       <h1>${escapeHtml(pick(entry,"title"))}</h1>
       <p class="article-summary">${escapeHtml(pick(entry,"summary"))}</p>
@@ -387,7 +396,7 @@ function renderEntryPage(data){
       <div class="article-body">${renderBlocks(entry)}</div>
       <footer class="article-footer">
         <span>🌙 Li · 璃 — LiveSpace</span>
-        <a href="${basePath}#timeline">${currentLang==="en"?"Continue through the timeline":"继续看时间线"} →</a>
+        <a class="article-next" href="${basePath}#timeline"><span>${currentLang==="en"?"Continue through the timeline":"继续看时间线"}</span>${arrowIcon("right")}</a>
       </footer>
     </article>`;
 }
