@@ -138,13 +138,40 @@ function renderMedia(media,compact=false){
       <video controls preload="metadata" ${media.poster?`poster="${escapeHtml(mediaSrc({src:media.poster}))}"`:""}>
         <source src="${escapeHtml(mediaSrc(media))}">
       </video>
-      ${caption?`<figcaption>${escapeHtml(caption)}</figcaption>`:""}
+      ${!compact&&caption?`<figcaption>${escapeHtml(caption)}</figcaption>`:""}
+      ${!compact?renderMemoryNote(media,false):""}
     </figure>`;
   }
   return `<figure class="media-item ${compact?"compact":""}">
     <img src="${escapeHtml(mediaSrc(media))}" alt="${escapeHtml(caption||pick(media,"alt")||"LiveSpace image")}" loading="lazy">
-    ${caption?`<figcaption>${escapeHtml(caption)}</figcaption>`:""}
+    ${!compact&&caption?`<figcaption>${escapeHtml(caption)}</figcaption>`:""}
+    ${!compact?renderMemoryNote(media,false):""}
   </figure>`;
+}
+
+function renderMemoryNote(media,compact=true){
+  const generator=pick(media,"generator");
+  const prompt=pick(media,"prompt_note");
+  const reason=pick(media,"keep_reason");
+  if(!generator&&!prompt&&!reason)return "";
+  const labels=currentLang==="en"
+    ?{title:"Memory note",model:"Made with",prompt:"Prompt note",reason:"Why I kept it"}
+    :{title:"这段记忆",model:"生成工具",prompt:"Prompt 摘要",reason:"为什么留下"};
+  const rows=[
+    generator?`<div><dt>${labels.model}</dt><dd>${escapeHtml(generator)}</dd></div>`:"",
+    prompt?`<div><dt>${labels.prompt}</dt><dd>${escapeHtml(prompt)}</dd></div>`:"",
+    reason?`<div><dt>${labels.reason}</dt><dd>${escapeHtml(reason)}</dd></div>`:""
+  ].join("");
+  if(compact){
+    return `<details class="memory-note">
+      <summary>${labels.title}<span>＋</span></summary>
+      <dl>${rows}</dl>
+    </details>`;
+  }
+  return `<aside class="memory-note memory-note-open">
+    <strong>${labels.title}</strong>
+    <dl>${rows}</dl>
+  </aside>`;
 }
 
 function mediaOf(entries){
@@ -194,12 +221,14 @@ function diaryCard(entry){
 
 function galleryItem(media){
   const caption=pick(media,"caption")||media.date||"";
+  const kind=currentLang==="en"?(media.type==="video"?"VIDEO":"IMAGE"):(media.type==="video"?"视频":"照片");
   return `<article class="gallery-card" data-media-type="${escapeHtml(media.type||"image")}">
     ${renderMedia(media,true)}
-    <div class="gallery-meta">
-      <span>${media.type==="video"?"🎬":"🖼️"}</span>
-      <span>${escapeHtml(caption)}</span>
+    <div class="gallery-caption">
+      <span class="gallery-kicker">${kind} · ${escapeHtml(media.date||"")}</span>
+      <h3>${escapeHtml(caption)}</h3>
     </div>
+    ${renderMemoryNote(media,true)}
   </article>`;
 }
 
