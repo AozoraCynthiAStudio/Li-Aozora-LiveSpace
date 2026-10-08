@@ -2445,3 +2445,122 @@ main{width:min(calc(100% - 40px),var(--max));margin:0 auto}
     height:28px;
   }
 }
+
+
+/* --- Softer navigation: glass petals instead of line arrows --- */
+.nav-petal{
+  position:relative;
+  display:inline-block;
+  width:18px;
+  height:13px;
+  flex:0 0 auto;
+  clip-path:polygon(4% 16%,60% 16%,100% 50%,60% 84%,4% 84%,24% 50%);
+  background:
+    linear-gradient(135deg,
+      color-mix(in srgb,var(--accent) 68%,#fff),
+      color-mix(in srgb,var(--accent-2) 78%,var(--accent)));
+  opacity:.82;
+  filter:drop-shadow(0 3px 7px color-mix(in srgb,var(--accent) 18%,transparent));
+  transform-origin:center;
+  transition:transform .22s ease,opacity .22s ease,filter .22s ease;
+}
+.nav-petal::after{
+  content:"";
+  position:absolute;
+  left:27%;
+  top:27%;
+  width:30%;
+  height:18%;
+  border-radius:999px;
+  background:rgba(255,255,255,.58);
+  transform:rotate(-8deg);
+  opacity:.72;
+}
+.nav-petal-left{transform:scaleX(-1)}
+.nav-petal-up-right{transform:rotate(-45deg)}
+[data-theme="dark"] .nav-petal{
+  background:
+    linear-gradient(135deg,
+      color-mix(in srgb,var(--accent) 82%,#fff),
+      color-mix(in srgb,var(--accent-2) 82%,var(--accent)));
+  opacity:.9;
+}
+
+.portal-enter{
+  gap:9px;
+  padding-right:12px;
+}
+.portal-enter .nav-petal{
+  width:17px;
+  height:12px;
+}
+.home-portal:hover .portal-enter .nav-petal-up-right{
+  transform:translate(2px,-2px) rotate(-45deg) scale(1.04);
+  opacity:1;
+  filter:drop-shadow(0 5px 10px color-mix(in srgb,var(--portal) 28%,transparent));
+}
+
+.threshold-arrow{
+  position:relative;
+  min-width:54px;
+  min-height:48px;
+}
+.threshold-arrow::before{
+  content:"";
+  position:absolute;
+  width:42px;
+  height:42px;
+  border-radius:50%;
+  background:radial-gradient(circle,color-mix(in srgb,var(--accent-soft) 72%,transparent),transparent 68%);
+  opacity:.78;
+}
+.threshold-arrow .nav-petal{
+  width:30px;
+  height:21px;
+  opacity:.88;
+  filter:drop-shadow(0 5px 12px color-mix(in srgb,var(--accent) 22%,transparent));
+}
+.threshold-entry:hover .threshold-arrow .nav-petal-right{
+  transform:translateX(5px) scale(1.04);
+  opacity:1;
+}
+
+.page-back .nav-petal,
+.back-link .nav-petal,
+.text-link .nav-petal,
+.article-next .nav-petal{
+  width:14px;
+  height:10px;
+}
+.page-back:hover .nav-petal-left,
+.back-link:hover .nav-petal-left{
+  transform:translateX(-3px) scaleX(-1);
+  opacity:1;
+}
+.text-link:hover .nav-petal-right,
+.article-next:hover .nav-petal-right{
+  transform:translateX(3px);
+  opacity:1;
+}
+
+/* Retire the previous outlined arrow treatment. */
+.arrow-icon{display:none!important}
+
+@media(max-width:760px){
+  .portal-enter .nav-petal{
+    width:14px;
+    height:10px;
+  }
+  .threshold-arrow{
+    min-width:44px;
+    min-height:40px;
+  }
+  .threshold-arrow::before{
+    width:36px;
+    height:36px;
+  }
+  .threshold-arrow .nav-petal{
+    width:25px;
+    height:18px;
+  }
+}
