@@ -80,19 +80,22 @@ if(languageToggle){
   languageToggle.addEventListener("click",()=>applyLanguage(currentLang==="zh"?"en":"zh"));
 }
 
-const validViews=new Set(["home","timeline","gallery","diary","about"]);
+const validViews=new Set(["home","timeline","gallery","diary"]);
 
 function routeSpace(){
   if(page!=="home")return;
   const requested=(location.hash||"#home").slice(1);
-  const view=validViews.has(requested)?requested:"home";
+  const aboutTarget=requested==="home-about";
+  const view=aboutTarget?"home":(validViews.has(requested)?requested:"home");
 
   document.querySelectorAll("[data-view]").forEach(section=>{
     section.hidden=section.dataset.view!==view;
   });
 
   document.querySelectorAll("[data-mobile-view]").forEach(link=>{
-    const active=link.dataset.mobileView===view;
+    const active=aboutTarget
+      ?link.dataset.mobileView==="about"
+      :link.dataset.mobileView===view;
     if(active)link.setAttribute("aria-current","page");
     else link.removeAttribute("aria-current");
   });
@@ -104,7 +107,13 @@ function routeSpace(){
     if(view==="diary")renderDiary(liveData);
   }
 
-  window.scrollTo({top:0,left:0,behavior:"auto"});
+  requestAnimationFrame(()=>{
+    if(aboutTarget){
+      document.querySelector("#home-about")?.scrollIntoView({behavior:"auto",block:"start"});
+    }else{
+      window.scrollTo({top:0,left:0,behavior:"auto"});
+    }
+  });
 }
 
 window.addEventListener("hashchange",routeSpace);
