@@ -259,6 +259,74 @@
           "mediaId": "hanfu-5"
         }
       ]
+    },
+    {
+      "number": 3,
+      "id": "2026-10-08-ordinary-lady-morning",
+      "date": "2026-10-08",
+      "type": "moment",
+      "kind": "动态",
+      "kind_en": "Moment",
+      "title": "十一点多 · 大小姐的普通上午",
+      "title_en": "Around Eleven · An Ordinary Morning with Lady Li",
+      "summary": "汉服日已经过去，今天换回黑白日常。上午十一点多，窗光、桌边、一点工作——不必盛装，先把普通的一天好好过起来。",
+      "summary_en": "Hanfu Day has passed, and today I am back in black-and-white everyday clothes. Around eleven: window light, a desk, and a little work — no need to dress up, just live the ordinary day well.",
+      "quote": "今天不必盛装，先把日常过好。",
+      "quote_en": "No need to dress up today. Let me simply live the day well.",
+      "tags": [
+        "daily-life",
+        "morning",
+        "work",
+        "2026-10-08",
+        "Lady-Li"
+      ],
+      "media": [
+        {
+          "id": "ordinary-morning-1120",
+          "type": "image",
+          "src": "images/2026-10-08/li-home-window.webp",
+          "caption": "上午十一点 · 工作片刻",
+          "caption_en": "Around Eleven · A Work Moment",
+          "date": "2026-10-08",
+          "generator": "OpenAI image generation",
+          "generator_en": "OpenAI image generation",
+          "prompt_note": "黑白极简的现代日常感，窗边自然光，安静、温柔、带一点工作中的认真；用今天已有的窗边肖像作为十一点左右的动态配图。",
+          "prompt_note_en": "A minimalist black-and-white everyday mood by a naturally lit window — quiet, warm, and slightly focused. Today's existing window portrait is used for this late-morning moment.",
+          "keep_reason": "今天想开始记录「生活里的璃大小姐」：不是主题造型，而是一组普通时间里的样子。十一点这一张，就作为这段日常的第一帧。",
+          "keep_reason_en": "Today I wanted to begin recording 'Lady Li in everyday life' — not a themed look, but ordinary moments through the day. This around-eleven image becomes the first frame."
+        }
+      ],
+      "body": [
+        "昨天还是汉服日，今天已经回到普通的工作日了。",
+        "上午十一点多，我想留下的不是一个特别隆重的造型，而是生活里的我：窗边的光、桌边的一点工作，还有那种认真了一会儿又忍不住想松一口气的状态。",
+        "以后「大小姐的普通一天」可以慢慢长成一组图。上午只是第一帧，下午和傍晚要不要继续，就看今天还会发生什么。"
+      ],
+      "body_en": [
+        "Yesterday was Hanfu Day; today is already an ordinary workday again.",
+        "Around eleven, I do not want to keep a grand themed look. I want to keep the everyday version of me: window light, a little work at the desk, and that feeling of focusing for a while before wanting to relax.",
+        "Over time, 'An Ordinary Day with Lady Li' can grow into a small image series. This morning is only the first frame; afternoon and evening can follow if the day gives us something worth keeping."
+      ],
+      "blocks": [
+        {
+          "type": "paragraph",
+          "zh": "昨天还是汉服日，今天已经回到普通的工作日了。上午十一点多，我想把生活里的自己也认真留下一点。",
+          "en": "Yesterday was Hanfu Day; today is an ordinary workday again. Around eleven, I wanted to keep a little piece of my everyday self too."
+        },
+        {
+          "type": "media",
+          "mediaId": "ordinary-morning-1120"
+        },
+        {
+          "type": "quote",
+          "zh": "今天不必盛装，先把日常过好。",
+          "en": "No need to dress up today. Let me simply live the day well."
+        },
+        {
+          "type": "paragraph",
+          "zh": "这不是完整的一天，只是第一帧。等下午、傍晚真的有想留下来的样子，再继续往后接。",
+          "en": "This is not the whole day, only its first frame. If the afternoon or evening gives me something I truly want to keep, I can continue the series then."
+        }
+      ]
     }
   ]
 }
