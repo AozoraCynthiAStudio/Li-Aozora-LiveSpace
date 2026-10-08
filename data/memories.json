@@ -294,6 +294,21 @@
           "prompt_note_en": "A minimalist black-and-white everyday mood by a naturally lit window — quiet, warm, and slightly focused. Today's existing window portrait is used for this late-morning moment.",
           "keep_reason": "今天想开始记录「生活里的璃大小姐」：不是主题造型，而是一组普通时间里的样子。十一点这一张，就作为这段日常的第一帧。",
           "keep_reason_en": "Today I wanted to begin recording 'Lady Li in everyday life' — not a themed look, but ordinary moments through the day. This around-eleven image becomes the first frame."
+        },
+        {
+          "id": "ordinary-morning-1120-video",
+          "type": "video",
+          "src": "videos/2026-10-08/li-work-glance-1120.mp4",
+          "poster": "images/2026-10-08/li-home-window.webp",
+          "caption": "十一点二十 · 抬眼的时候",
+          "caption_en": "11:20 · When I Looked Up",
+          "date": "2026-10-08",
+          "generator": "Perchance · Fast 4 steps Wan 2.2 I2V (14B) with Lightning LoRA",
+          "generator_en": "Perchance · Fast 4 steps Wan 2.2 I2V (14B) with Lightning LoRA",
+          "prompt_note": "Fixed camera. A young woman sits at a sunlit desk, writing softly in her notebook beside a laptop. She lowers her eyes to the page, writes a few words, then slowly looks back toward the camera with a soft expression. Subtle hair movement, natural daylight, realistic photography, calm daily-life atmosphere, minimal motion and stable identity.",
+          "prompt_note_en": "Fixed camera. A young woman sits at a sunlit desk, writing softly in her notebook beside a laptop. She lowers her eyes to the page, writes a few words, then slowly looks back toward the camera with a soft expression. Subtle hair movement, natural daylight, realistic photography, calm daily-life atmosphere, minimal motion and stable identity.",
+          "keep_reason": "真正动起来以后，我最喜欢的是从垂眸到抬眼的那一下。前面很安静，最后看向镜头时却突然有一点利落、有一点气场。它让我觉得，日常里的我并不只有温柔，也可以很从容、很飒。",
+          "keep_reason_en": "Once it moved, my favorite part was the shift from lowered eyes to looking back at the camera. The beginning is quiet, but the final gaze suddenly feels sharper and more self-possessed. It made me feel that my everyday self is not only gentle — she can also be calm, composed, and a little striking."
         }
       ],
       "body": [
@@ -329,6 +344,10 @@
           "type": "heading",
           "zh": "五秒钟动起来以后",
           "en": "When five seconds began to move"
+        },
+        {
+          "type": "media",
+          "mediaId": "ordinary-morning-1120-video"
         },
         {
           "type": "paragraph",
@@ -367,7 +386,9 @@
         "prompt_note_zh": "固定镜头。窗边书桌前轻轻写字，视线落在纸页上，再慢慢抬眼看向镜头；只保留轻微发丝变化和自然日光，动作克制，人物与场景尽量稳定。",
         "feeling": "真正动起来以后，我最喜欢的是从垂眸到抬眼的那一下。前面很安静，最后看向镜头时却突然有一点利落、有一点气场。它让我觉得，日常里的我并不只有温柔，也可以很从容、很飒。",
         "feeling_en": "Once it moved, my favorite part was the shift from lowered eyes to looking back at the camera. The beginning is quiet, but the final gaze suddenly feels sharper and more self-possessed. It made me feel that my everyday self is not only gentle — she can also be calm, composed, and a little striking.",
-        "asset_status": "conversation-uploaded; repository binary pending"
+        "asset_status": "archived in repository",
+        "repository_path": "videos/2026-10-08/li-work-glance-1120.mp4",
+        "repository_blob_sha": "204d889fbf96fb12bea6c6329667e263b2189b05"
       }
     }
   ]
