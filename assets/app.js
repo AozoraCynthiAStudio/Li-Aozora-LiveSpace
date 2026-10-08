@@ -209,6 +209,25 @@ function sortedEntries(data){
   return [...(data.entries||data.moments||[])].sort((a,b)=>b.date.localeCompare(a.date)||((b.number||0)-(a.number||0)));
 }
 
+function renderTimelinePreview(media,entry){
+  const src=media.type==="video"
+    ?(media.poster?mediaSrc({src:media.poster}):"")
+    :mediaSrc(media);
+  const label=currentLang==="en"
+    ?(media.type==="video"?"VIDEO MEMORY":"IMAGE MEMORY")
+    :(media.type==="video"?"视频记忆":"影像记忆");
+
+  if(!src)return `<a class="timeline-preview timeline-preview-empty" href="${entryUrl(entry)}">
+    <span>${label}</span>
+  </a>`;
+
+  return `<a class="timeline-preview" href="${entryUrl(entry)}" aria-label="${escapeHtml(pick(entry,"title"))}">
+    <img class="timeline-preview-backdrop" src="${escapeHtml(src)}" alt="" aria-hidden="true" loading="lazy">
+    <img class="timeline-preview-image" src="${escapeHtml(src)}" alt="${escapeHtml(pick(media,"caption")||pick(entry,"title"))}" loading="lazy">
+    <span class="timeline-preview-label">${label}</span>
+  </a>`;
+}
+
 function timelineCard(entry,index){
   const firstMedia=(entry.media||[])[0];
   return `<article class="feed-card">
@@ -225,7 +244,7 @@ function timelineCard(entry,index){
         ${entry.quote?`<blockquote>${escapeHtml(pick(entry,"quote"))}</blockquote>`:""}
         <a class="text-link" href="${entryUrl(entry)}">${currentLang==="en"?"Open this moment":"打开这个瞬间"} →</a>
       </div>
-      ${firstMedia?`<div class="feed-media">${renderMedia(firstMedia,true)}</div>`:""}
+      ${firstMedia?`<div class="feed-media">${renderTimelinePreview(firstMedia,entry)}</div>`:""}
     </div>
   </article>`;
 }
