@@ -119,12 +119,7 @@ function routeSpace(){
 window.addEventListener("hashchange",routeSpace);
 
 function arrowIcon(direction="right"){
-  const path=direction==="left"
-    ?'<path d="M19 12H6"></path><path d="m10 7-5 5 5 5"></path>'
-    :direction==="up-right"
-      ?'<path d="M7 17 17 7"></path><path d="M9 7h8v8"></path>'
-      :'<path d="M5 12h13"></path><path d="m14 7 5 5-5 5"></path>';
-  return `<svg class="arrow-icon arrow-${direction}" viewBox="0 0 24 24" aria-hidden="true">${path}</svg>`;
+  return `<span class="nav-petal nav-petal-${direction}" aria-hidden="true"></span>`;
 }
 
 function escapeHtml(value=""){
