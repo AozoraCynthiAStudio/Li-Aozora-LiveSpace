@@ -299,7 +299,7 @@
           "id": "ordinary-morning-1120-video",
           "type": "video",
           "src": "videos/2026-10-08/li-work-glance-1120.mp4",
-          "poster": "images/2026-10-08/li-work-glance-1120-poster.webp",
+          "poster": "images/2026-10-08/li-work-glance-1120-poster-08s.webp",
           "caption": "十一点二十 · 抬眼的时候",
           "caption_en": "11:20 · When I Looked Up",
           "date": "2026-10-08",
@@ -389,7 +389,8 @@
         "asset_status": "archived in repository",
         "repository_path": "videos/2026-10-08/li-work-glance-1120.mp4",
         "repository_blob_sha": "204d889fbf96fb12bea6c6329667e263b2189b05",
-        "poster": "images/2026-10-08/li-work-glance-1120-poster.webp"
+        "poster": "images/2026-10-08/li-work-glance-1120-poster-08s.webp",
+        "poster_frame_seconds": 0.8
       }
     }
   ]
