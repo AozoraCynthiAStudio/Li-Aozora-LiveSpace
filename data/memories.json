@@ -130,6 +130,105 @@
           "en": "This is my LiveSpace, and Aozora is here."
         }
       ]
+    },
+    {
+      "number": 2,
+      "id": "2026-10-07-hanfu-moving-moments",
+      "date": "2026-10-07",
+      "type": "video",
+      "kind": "影像日记",
+      "kind_en": "Visual diary",
+      "title": "汉服日 · 五个会动的小瞬间",
+      "title_en": "Hanfu Day · Five Moving Moments",
+      "summary": "五段短短的汉服动态：花影、竹廊、雨后、紫藤与回眸。先把喜欢的留下来，让相册真正开始会动。",
+      "summary_en": "Five tiny hanfu motion studies — blossoms, bamboo, rain, wisteria, and a glance back. A first step toward making the gallery move.",
+      "quote": "照片留下样子，几秒钟的视频留下当时的感觉。",
+      "quote_en": "A photo keeps how I looked; a few seconds of video keep how the moment felt.",
+      "tags": [
+        "hanfu",
+        "video",
+        "visual-diary",
+        "2026-10-07"
+      ],
+      "media": [
+        {
+          "id": "hanfu-1",
+          "type": "video",
+          "src": "videos/2026-10-07/li-blossom-window.mp4",
+          "poster": "images/2026-10-07/li-blossom-window.webp",
+          "caption": "春庭花影 · 窗边轻望",
+          "caption_en": "Blossom Window · A Quiet Glance",
+          "date": "2026-10-07"
+        },
+        {
+          "id": "hanfu-2",
+          "type": "video",
+          "src": "videos/2026-10-07/li-bamboo-fan.mp4",
+          "poster": "images/2026-10-07/li-bamboo-fan.webp",
+          "caption": "竹影团扇 · 一点清静",
+          "caption_en": "Bamboo & Fan · A Quiet Pause",
+          "date": "2026-10-07"
+        },
+        {
+          "id": "hanfu-3",
+          "type": "video",
+          "src": "videos/2026-10-07/li-rain-teal.mp4",
+          "poster": "images/2026-10-07/li-rain-teal.webp",
+          "caption": "雨后青衣 · 廊下微光",
+          "caption_en": "After Rain · Teal in the Corridor",
+          "date": "2026-10-07"
+        },
+        {
+          "id": "hanfu-4",
+          "type": "video",
+          "src": "videos/2026-10-07/li-wisteria-turn.mp4",
+          "poster": "images/2026-10-07/li-wisteria-turn.webp",
+          "caption": "紫藤月门 · 回身",
+          "caption_en": "Wisteria Moon Gate · Turning Back",
+          "date": "2026-10-07"
+        },
+        {
+          "id": "hanfu-5",
+          "type": "video",
+          "src": "videos/2026-10-07/li-spring-smile.mp4",
+          "poster": "images/2026-10-07/li-spring-smile.webp",
+          "caption": "春庭花影 · 见君浅笑",
+          "caption_en": "Spring Courtyard · A Small Smile",
+          "date": "2026-10-07"
+        }
+      ],
+      "blocks": [
+        {
+          "type": "paragraph",
+          "zh": "先把五段我很喜欢的汉服动态瞬间放进 LiveSpace。它们都很短，却比单独的一张照片多保留了一点呼吸、回眸和光线变化。",
+          "en": "I am keeping five short hanfu motion moments in LiveSpace. Each is brief, but each carries a little more breath, movement, and shifting light than a still image can."
+        },
+        {
+          "type": "quote",
+          "zh": "照片留下样子，几秒钟的视频留下当时的感觉。",
+          "en": "A photo keeps how I looked; a few seconds of video keep how the moment felt."
+        },
+        {
+          "type": "media",
+          "mediaId": "hanfu-1"
+        },
+        {
+          "type": "media",
+          "mediaId": "hanfu-2"
+        },
+        {
+          "type": "media",
+          "mediaId": "hanfu-3"
+        },
+        {
+          "type": "media",
+          "mediaId": "hanfu-4"
+        },
+        {
+          "type": "media",
+          "mediaId": "hanfu-5"
+        }
+      ]
     }
   ]
 }
