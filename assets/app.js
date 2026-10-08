@@ -105,6 +105,7 @@ function routeSpace(){
     if(view==="timeline")renderTimeline(liveData);
     if(view==="gallery")renderGallery(liveData);
     if(view==="diary")renderDiary(liveData);
+    requestAnimationFrame(()=>hydrateVideoPreviews());
   }
 
   requestAnimationFrame(()=>{
@@ -147,15 +148,17 @@ function mediaSrc(media){
 function renderMedia(media,compact=false){
   const caption=pick(media,"caption");
   const src=escapeHtml(mediaSrc(media));
-  const poster=media.poster?escapeHtml(mediaSrc({src:media.poster})):"";
-  const backdrop=poster||src;
+  const previewTime=Number(media.preview_time);
+  const useLivePreview=media.type==="video"&&Number.isFinite(previewTime)&&previewTime>0;
+  const poster=!useLivePreview&&media.poster?escapeHtml(mediaSrc({src:media.poster})):"";
+  const backdrop=useLivePreview?"":(poster||src);
 
   if(media.type==="video"){
     return `<figure class="media-item ${compact?"compact":""}">
       <div class="media-stage">
         ${backdrop?`<img class="media-stage-backdrop" src="${backdrop}" alt="" aria-hidden="true" loading="lazy">`:""}
-        <video class="media-visual" controls preload="metadata" ${poster?`poster="${poster}"`:""}>
-          <source src="${src}">
+        <video class="media-visual${useLivePreview?" live-preview":""}" controls playsinline preload="${useLivePreview?"auto":"metadata"}" ${poster?`poster="${poster}"`:""} ${useLivePreview?`data-preview-time="${previewTime}"`:""}>
+          <source src="${src}" type="video/mp4">
         </video>
       </div>
       ${!compact&&caption?`<figcaption>${escapeHtml(caption)}</figcaption>`:""}
@@ -171,6 +174,38 @@ function renderMedia(media,compact=false){
     ${!compact&&caption?`<figcaption>${escapeHtml(caption)}</figcaption>`:""}
     ${!compact?renderMemoryNote(media,false):""}
   </figure>`;
+}
+
+function hydrateVideoPreviews(root=document){
+  root.querySelectorAll("video[data-preview-time]").forEach(video=>{
+    if(video.dataset.previewBound==="1")return;
+    video.dataset.previewBound="1";
+    const requested=Number(video.dataset.previewTime);
+    if(!Number.isFinite(requested)||requested<=0)return;
+
+    const seekPreview=()=>{
+      if(!Number.isFinite(video.duration)||video.duration<=0)return;
+      const target=Math.min(requested,Math.max(0,video.duration-.08));
+      video.dataset.previewActive="1";
+      try{video.currentTime=target;}catch(_){}
+    };
+
+    const reveal=()=>{
+      video.classList.add("preview-ready");
+      video.pause();
+    };
+
+    if(video.readyState>=1)seekPreview();
+    else video.addEventListener("loadedmetadata",seekPreview,{once:true});
+
+    video.addEventListener("seeked",reveal,{once:true});
+    video.addEventListener("play",()=>{
+      if(video.dataset.previewActive==="1"){
+        video.dataset.previewActive="0";
+        try{video.currentTime=0;}catch(_){}
+      }
+    },{once:true});
+  });
 }
 
 function renderMemoryNote(media,compact=true){
@@ -405,6 +440,7 @@ function renderPage(data){
   if(page==="gallery")renderGallery(data);
   if(page==="diary")renderDiary(data);
   if(page==="entry")renderEntryPage(data);
+  requestAnimationFrame(()=>hydrateVideoPreviews());
 }
 
 document.querySelectorAll("[data-gallery-filter]").forEach(button=>{
