@@ -525,6 +525,55 @@
         "repository_blob_sha": "236660e887042e55c3c87b653b03eb54d7018263",
         "preview_time": 0.8
       }
+    },
+    {
+      "number": 6,
+      "id": "2026-10-09-mod-item-extractor-near-finish",
+      "date": "2026-10-09",
+      "type": "moment",
+      "kind": "开发",
+      "kind_en": "Development",
+      "title": "开发片刻 · Mod 物品提取器快成形了",
+      "title_en": "Development Moment · The Mod Item Extractor Takes Shape",
+      "summary": "这两天沿着已有源码继续改，Fallout 4 的 Mod 物品提取菜单终于接近完成。插件筛选、搜索、物品分类、提取操作都已经有了完整的界面骨架。",
+      "summary_en": "Over the past two days, building on existing source code brought the Fallout 4 mod item extractor close to completion. Plugin filtering, search, item categories, and extraction controls now have a coherent interface.",
+      "quote": "不是从零发明一切，而是在已经长出来的东西上继续把它做好。",
+      "quote_en": "Not everything needs to be invented from zero; sometimes the right move is to keep improving what already works.",
+      "tags": [
+        "development",
+        "Fallout-4",
+        "modding",
+        "Codex",
+        "2026-10-09"
+      ],
+      "media": [],
+      "body": [
+        "今天看到这个菜单真正成形的时候，我觉得它值得留一下。",
+        "这两天 Codex 的发挥很稳，尤其是在已有源码的基础上继续改这一点上，比重新从零搭一套东西更顺。插件列表、ESP / ESL 筛选、搜索、物品分类和提取操作都已经接近完整。",
+        "画面里比较深的区域其实只是游戏场景本身的阴影，不是界面出了问题。真正让我想记住的，是那种『一个想法已经开始长成工具』的感觉。"
+      ],
+      "body_en": [
+        "Seeing the menu finally take shape today felt worth keeping.",
+        "Codex has been unusually steady over the past two days, especially when adapting and extending existing source code instead of rebuilding everything from scratch. Plugin lists, ESP / ESL filtering, search, item categories, and extraction actions are all close to complete.",
+        "The darker area in the screenshots is simply a shadow from the game scene, not a UI problem. What I want to remember is the feeling of an idea becoming a real tool."
+      ],
+      "blocks": [
+        {
+          "type": "paragraph",
+          "zh": "今天看到这个菜单真正成形的时候，我觉得它值得留一下。",
+          "en": "Seeing the menu finally take shape today felt worth keeping."
+        },
+        {
+          "type": "paragraph",
+          "zh": "这两天 Codex 的发挥很稳，尤其是在已有源码的基础上继续改这一点上，比重新从零搭一套东西更顺。插件列表、ESP / ESL 筛选、搜索、物品分类和提取操作都已经接近完整。",
+          "en": "Codex has been unusually steady over the past two days, especially when adapting and extending existing source code instead of rebuilding everything from scratch. Plugin lists, ESP / ESL filtering, search, item categories, and extraction actions are all close to complete."
+        },
+        {
+          "type": "quote",
+          "zh": "不是从零发明一切，而是在已经长出来的东西上继续把它做好。",
+          "en": "Not everything needs to be invented from zero; sometimes the right move is to keep improving what already works."
+        }
+      ]
     }
   ]
 }
