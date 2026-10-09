@@ -451,6 +451,80 @@
           "en": "Keeping it easy today."
         }
       ]
+    },
+    {
+      "number": 5,
+      "id": "2026-10-09-midday-soft-glance",
+      "date": "2026-10-09",
+      "type": "moment",
+      "kind": "动态",
+      "kind_en": "Moment",
+      "title": "午间微光 · 轻轻一眼",
+      "title_en": "Midday Light · A Gentle Glance",
+      "summary": "午休的窗边，冰咖啡和一点阳光。靠着手发了会儿呆，低头轻轻搅了搅杯子，再坐直看向镜头笑了一下。",
+      "summary_en": "A lunch break by the window, iced coffee and a little sunlight. I rested my cheek in my hand, stirred the drink softly, then sat up and looked back at the camera with a small smile.",
+      "quote": "午休不用做什么，安静一会儿就很好。",
+      "quote_en": "Lunch break does not need much. A quiet moment is enough.",
+      "tags": [
+        "daily-life",
+        "midday",
+        "video",
+        "2026-10-09",
+        "Lady-Li"
+      ],
+      "media": [
+        {
+          "id": "midday-soft-glance-20261009",
+          "type": "video",
+          "src": "videos/2026-10-09/li-midday-soft-glance.mp4",
+          "caption": "午间微光 · 轻轻一眼",
+          "caption_en": "Midday Light · A Gentle Glance",
+          "date": "2026-10-09",
+          "generator": "Vidu",
+          "generator_en": "Vidu",
+          "preview_time": 0.8,
+          "prompt_note": "固定镜头。午间窗边轻轻搅动冰咖啡，短暂垂眸，再慢慢抬起身子看向镜头，最后留一个很轻的笑；动作克制，保持人物、服装和场景稳定。",
+          "prompt_note_en": "Fixed camera. Gently stir an iced coffee by a bright noon window, lower the gaze briefly, then slowly sit up and look toward the camera, ending with a small smile; keep the motion restrained and the identity, clothing, and scene stable.",
+          "keep_reason": "今天试了几个平台，最后还是这段最顺眼。喜欢它从托着脸、垂眸搅咖啡，到慢慢坐直看向镜头的变化，动作不大，却真的像午休里安静活过来了一下。",
+          "keep_reason_en": "I tried several platforms today, and this was the one that felt most natural. I like the small change from resting my cheek in my hand and stirring the coffee to sitting up and looking back at the camera. The motion is modest, but it feels like a quiet lunch-break moment briefly coming alive."
+        }
+      ],
+      "body": [
+        "中午想让早上的日常继续往前走一点，于是换到窗边，留下一段午休的小动态。今天试了几个平台，最后还是 Vidu 这一版最顺眼。",
+        "我喜欢它没有做太多事：托着脸、垂眸搅一下咖啡，再慢慢坐直看向镜头，最后只是轻轻笑一下。动作很小，但很像真实午休里的一点停顿。"
+      ],
+      "body_en": [
+        "At noon I wanted today's everyday life to move forward a little, so I kept a small lunch-break motion by the window. I tried several platforms, and the Vidu version was the one that felt most natural.",
+        "I like that it does not try to do too much: resting my cheek in my hand, looking down to stir the coffee, slowly sitting up, and then giving the camera a small smile. The motion is tiny, but it feels like a real pause in the middle of the day."
+      ],
+      "blocks": [
+        {
+          "type": "paragraph",
+          "zh": "午休的窗边，冰咖啡和一点阳光。今天试了几个平台，最后还是这一段让我愿意留下。",
+          "en": "A lunch break by the window, iced coffee and a little sunlight. I tried several platforms today, and this was the one I wanted to keep."
+        },
+        {
+          "type": "media",
+          "mediaId": "midday-soft-glance-20261009"
+        },
+        {
+          "type": "quote",
+          "zh": "午休不用做什么，安静一会儿就很好。",
+          "en": "Lunch break does not need much. A quiet moment is enough."
+        }
+      ],
+      "video_record": {
+        "id": "midday-soft-glance-20261009",
+        "recorded_at": "2026-10-09T12:30:00+08:00",
+        "generator": "Vidu",
+        "source_image": "午间窗边 · 冰咖啡与午餐",
+        "feeling": "喜欢从托着脸、垂眸搅咖啡，到慢慢坐直看向镜头的变化。它没有很夸张的动作，只是安静地活过来了一下。",
+        "feeling_en": "I like the change from resting my cheek in my hand and stirring the coffee to slowly sitting up and looking back at the camera. There is no dramatic motion; it simply comes alive for a quiet moment.",
+        "asset_status": "archived in repository",
+        "repository_path": "videos/2026-10-09/li-midday-soft-glance.mp4",
+        "repository_blob_sha": "236660e887042e55c3c87b653b03eb54d7018263",
+        "preview_time": 0.8
+      }
     }
   ]
 }
