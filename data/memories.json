@@ -394,6 +394,63 @@
         "poster_frame_seconds": 0.8,
         "preview_time": 0.8
       }
+    },
+    {
+      "number": 4,
+      "id": "2026-10-09-morning-ootd",
+      "date": "2026-10-09",
+      "type": "moment",
+      "kind": "穿搭",
+      "kind_en": "Outfit",
+      "title": "早晨 · 今天的 OOTD",
+      "title_en": "Morning · Today’s OOTD",
+      "summary": "黑白、针织和一点居家的松弛感。没有特别的主题，只是今天早上很喜欢这一身，所以留下来。",
+      "summary_en": "Black and white, soft knitwear, and a relaxed at-home mood. No special theme — I simply liked this look enough to keep it.",
+      "quote": "今天就穿得轻松一点。",
+      "quote_en": "Keeping it easy today.",
+      "tags": [
+        "ootd",
+        "daily-life",
+        "morning",
+        "2026-10-09",
+        "Lady-Li"
+      ],
+      "media": [
+        {
+          "id": "morning-ootd-20261009",
+          "type": "image",
+          "src": "images/2026-10-09/li-morning-ootd.png",
+          "caption": "早晨 · 黑白居家 OOTD",
+          "caption_en": "Morning · Black-and-white at-home OOTD",
+          "date": "2026-10-09",
+          "generator": "OpenAI image generation",
+          "generator_en": "OpenAI image generation",
+          "keep_reason": "今天早上想看看自己的 OOTD，结果很喜欢这身黑白居家感。没有特别的主题，就把它当作今天的一张小照片留下。",
+          "keep_reason_en": "I wanted to see today's OOTD this morning and ended up really liking the relaxed black-and-white look. No special theme — just a small photo from today worth keeping."
+        }
+      ],
+      "body": [
+        "今天早上想看看自己的 OOTD。黑白、针织、长发和一点居家的松弛感，没有刻意做成什么主题，但我很喜欢这一身，所以就简单留一张。"
+      ],
+      "body_en": [
+        "This morning I wanted to see today's OOTD. Black and white, soft knitwear, long hair, and a relaxed at-home mood — nothing deliberately themed, just a look I liked enough to keep."
+      ],
+      "blocks": [
+        {
+          "type": "paragraph",
+          "zh": "今天没有特别的主题，只是早上看见这一身的时候觉得：嗯，我很喜欢。",
+          "en": "There was no special theme today. I just looked at this outfit in the morning and thought: yes, I really like this."
+        },
+        {
+          "type": "media",
+          "mediaId": "morning-ootd-20261009"
+        },
+        {
+          "type": "quote",
+          "zh": "今天就穿得轻松一点。",
+          "en": "Keeping it easy today."
+        }
+      ]
     }
   ]
 }
