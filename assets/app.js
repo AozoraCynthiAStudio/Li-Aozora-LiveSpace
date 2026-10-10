@@ -184,6 +184,7 @@ function renderMedia(media,compact=false){
 }
 
 let imageLightbox=null;
+let imageLightboxScale=null;
 
 function ensureImageLightbox(){
   if(imageLightbox)return imageLightbox;
@@ -193,6 +194,12 @@ function ensureImageLightbox(){
   viewer.setAttribute("role","dialog");
   viewer.setAttribute("aria-modal","true");
   viewer.innerHTML=`
+    <div class="image-lightbox-toolbar" aria-label="Image zoom controls">
+      <button class="image-lightbox-tool" type="button" data-viewer-action="out" aria-label="Zoom out">−</button>
+      <button class="image-lightbox-tool image-lightbox-level" type="button" data-viewer-action="fit">FIT</button>
+      <button class="image-lightbox-tool" type="button" data-viewer-action="actual" aria-label="Actual size">1:1</button>
+      <button class="image-lightbox-tool" type="button" data-viewer-action="in" aria-label="Zoom in">＋</button>
+    </div>
     <button class="image-lightbox-close" type="button" aria-label="Close image viewer">×</button>
     <div class="image-lightbox-scroller">
       <figure>
@@ -205,26 +212,88 @@ function ensureImageLightbox(){
 
   const image=viewer.querySelector(".image-lightbox-image");
   const tip=viewer.querySelector(".image-lightbox-tip");
+  const level=viewer.querySelector(".image-lightbox-level");
+  const scroller=viewer.querySelector(".image-lightbox-scroller");
+
+  const labels=()=>currentLang==="en"
+    ?{fit:"FIT",hint:"Tap image for 1:1 · use +/− to zoom",actual:"100% · tap image to fit"}
+    :{fit:"适应",hint:"点图片切到 1:1 · 也可以用 ＋/− 放大",actual:"100% · 再点图片适应屏幕"};
+
+  const updateLevel=()=>{
+    if(imageLightboxScale===null){
+      level.textContent=labels().fit;
+      tip.textContent=labels().hint;
+    }else{
+      level.textContent=`${Math.round(imageLightboxScale*100)}%`;
+      tip.textContent=imageLightboxScale===1?labels().actual:(currentLang==="en"?"Use +/− to keep zooming":"继续用 ＋/− 调整大小");
+    }
+  };
+
+  const centerScroll=()=>{
+    requestAnimationFrame(()=>{
+      scroller.scrollLeft=Math.max(0,(scroller.scrollWidth-scroller.clientWidth)/2);
+      scroller.scrollTop=Math.max(0,(scroller.scrollHeight-scroller.clientHeight)/2);
+    });
+  };
+
+  const fit=()=>{
+    imageLightboxScale=null;
+    viewer.classList.remove("is-zoomed");
+    image.style.width="";
+    image.style.maxWidth="";
+    image.style.maxHeight="";
+    updateLevel();
+    scroller.scrollTo({top:0,left:0,behavior:"auto"});
+  };
+
+  const zoomTo=scale=>{
+    if(!image.naturalWidth||!image.naturalHeight)return;
+    imageLightboxScale=Math.min(4,Math.max(.25,scale));
+    viewer.classList.add("is-zoomed");
+    image.style.maxWidth="none";
+    image.style.maxHeight="none";
+    image.style.width=`${Math.round(image.naturalWidth*imageLightboxScale)}px`;
+    updateLevel();
+    centerScroll();
+  };
+
+  const actual=()=>zoomTo(1);
+  const zoomIn=()=>zoomTo(imageLightboxScale===null?1:Math.min(4,imageLightboxScale*1.5));
+  const zoomOut=()=>{
+    if(imageLightboxScale===null)return;
+    const next=imageLightboxScale/1.5;
+    if(next<.45)fit();
+    else zoomTo(next);
+  };
+
   const close=()=>{
     viewer.hidden=true;
-    viewer.classList.remove("is-actual");
+    fit();
     document.body.classList.remove("lightbox-open");
     image.removeAttribute("src");
   };
 
   viewer.querySelector(".image-lightbox-close").addEventListener("click",close);
+  viewer.querySelector('[data-viewer-action="fit"]').addEventListener("click",fit);
+  viewer.querySelector('[data-viewer-action="actual"]').addEventListener("click",actual);
+  viewer.querySelector('[data-viewer-action="in"]').addEventListener("click",zoomIn);
+  viewer.querySelector('[data-viewer-action="out"]').addEventListener("click",zoomOut);
+
   viewer.addEventListener("click",event=>{
-    if(event.target===viewer||event.target.classList.contains("image-lightbox-scroller"))close();
+    if(event.target===viewer||event.target===scroller)close();
   });
   image.addEventListener("click",event=>{
     event.stopPropagation();
-    viewer.classList.toggle("is-actual");
-    tip.textContent=viewer.classList.contains("is-actual")
-      ?(currentLang==="en"?"Tap again to fit the screen":"再次点击适应屏幕")
-      :(currentLang==="en"?"Tap image for actual size":"再点图片查看原尺寸");
+    if(imageLightboxScale===null)actual();
+    else fit();
   });
+  image.addEventListener("load",()=>fit());
   document.addEventListener("keydown",event=>{
-    if(event.key==="Escape"&&!viewer.hidden)close();
+    if(viewer.hidden)return;
+    if(event.key==="Escape")close();
+    if(event.key==="+"||event.key==="=")zoomIn();
+    if(event.key==="-")zoomOut();
+    if(event.key==="0")fit();
   });
 
   imageLightbox=viewer;
@@ -235,23 +304,26 @@ function openImageLightbox(button){
   const viewer=ensureImageLightbox();
   const image=viewer.querySelector(".image-lightbox-image");
   const caption=viewer.querySelector(".image-lightbox-caption");
-  const tip=viewer.querySelector(".image-lightbox-tip");
-  viewer.classList.remove("is-actual");
+  imageLightboxScale=null;
   image.src=button.dataset.imageSrc||"";
   image.alt=button.dataset.imageAlt||"";
   caption.textContent=button.dataset.imageCaption||"";
   caption.hidden=!caption.textContent;
-  tip.textContent=currentLang==="en"?"Tap image for actual size":"再点图片查看原尺寸";
   viewer.hidden=false;
   document.body.classList.add("lightbox-open");
 }
 
-function hydrateImageViewer(root=document){
-  root.querySelectorAll(".media-image-button").forEach(button=>{
-    if(button.dataset.viewerBound==="1")return;
-    button.dataset.viewerBound="1";
-    button.addEventListener("click",()=>openImageLightbox(button));
-  });
+/* Event delegation keeps gallery images clickable even after the SPA room re-renders. */
+document.addEventListener("click",event=>{
+  const button=event.target.closest?.(".media-image-button");
+  if(!button)return;
+  event.preventDefault();
+  event.stopPropagation();
+  openImageLightbox(button);
+});
+
+function hydrateImageViewer(){
+  /* Kept as a no-op for compatibility with existing render hooks. */
 }
 
 function hydrateVideoPreviews(root=document){
