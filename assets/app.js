@@ -171,7 +171,7 @@ function renderMedia(media,compact=false){
   const zoomHint=currentLang==="en"?"View larger":"查看大图";
   return `<figure class="media-item media-item-image ${compact?"compact":""}">
     <button class="media-image-button" type="button"
-      data-image-src="${src}"
+      data-image-src="${escapeHtml(mediaSrc({src:media.full_src||media.src||media.path}))}"
       data-image-alt="${escapeHtml(alt)}"
       data-image-caption="${escapeHtml(caption||"")}"
       aria-label="${escapeHtml(openLabel)}">
@@ -185,6 +185,7 @@ function renderMedia(media,compact=false){
 
 let imageLightbox=null;
 let imageLightboxScale=null;
+let imageLightboxTrigger=null;
 
 function ensureImageLightbox(){
   if(imageLightbox)return imageLightbox;
@@ -193,6 +194,7 @@ function ensureImageLightbox(){
   viewer.hidden=true;
   viewer.setAttribute("role","dialog");
   viewer.setAttribute("aria-modal","true");
+  viewer.setAttribute("aria-label",currentLang==="en"?"Photo viewer":"照片查看器");
   viewer.innerHTML=`
     <div class="image-lightbox-toolbar" aria-label="Image zoom controls">
       <button class="image-lightbox-tool" type="button" data-viewer-action="out" aria-label="Zoom out">−</button>
@@ -217,7 +219,7 @@ function ensureImageLightbox(){
 
   const labels=()=>currentLang==="en"
     ?{fit:"FIT",hint:"Tap image for 1:1 · use +/− to zoom",actual:"100% · tap image to fit"}
-    :{fit:"适应",hint:"点图片切到 1:1 · 也可以用 ＋/− 放大",actual:"100% · 再点图片适应屏幕"};
+    :{fit:"FIT",hint:"点图片切到 1:1 · 也可以用 ＋/− 放大",actual:"100% · 再点图片适应屏幕"};
 
   const updateLevel=()=>{
     if(imageLightboxScale===null){
@@ -262,8 +264,7 @@ function ensureImageLightbox(){
   const zoomOut=()=>{
     if(imageLightboxScale===null)return;
     const next=imageLightboxScale/1.5;
-    if(next<.45)fit();
-    else zoomTo(next);
+    zoomTo(next);
   };
 
   const close=()=>{
@@ -271,6 +272,7 @@ function ensureImageLightbox(){
     fit();
     document.body.classList.remove("lightbox-open");
     image.removeAttribute("src");
+    imageLightboxTrigger?.focus({preventScroll:true});
   };
 
   viewer.querySelector(".image-lightbox-close").addEventListener("click",close);
@@ -282,6 +284,32 @@ function ensureImageLightbox(){
   viewer.addEventListener("click",event=>{
     if(event.target===viewer||event.target===scroller)close();
   });
+  let drag=null;
+  let dragged=false;
+  image.draggable=false;
+  scroller.addEventListener("pointerdown",event=>{
+    if(event.pointerType!=="mouse"||event.button!==0||imageLightboxScale===null)return;
+    drag={id:event.pointerId,x:event.clientX,y:event.clientY,left:scroller.scrollLeft,top:scroller.scrollTop};
+    dragged=false;
+  });
+  scroller.addEventListener("pointermove",event=>{
+    if(!drag||event.pointerId!==drag.id)return;
+    const dx=event.clientX-drag.x,dy=event.clientY-drag.y;
+    if(!dragged&&Math.hypot(dx,dy)<5)return;
+    dragged=true;
+    scroller.setPointerCapture(event.pointerId);
+    scroller.scrollLeft=drag.left-dx;
+    scroller.scrollTop=drag.top-dy;
+  });
+  const endDrag=()=>{drag=null;};
+  scroller.addEventListener("pointerup",endDrag);
+  scroller.addEventListener("pointercancel",endDrag);
+  scroller.addEventListener("click",event=>{
+    if(!dragged)return;
+    dragged=false;
+    event.preventDefault();
+    event.stopImmediatePropagation();
+  },true);
   image.addEventListener("click",event=>{
     event.stopPropagation();
     if(imageLightboxScale===null)actual();
@@ -304,6 +332,7 @@ function openImageLightbox(button){
   const viewer=ensureImageLightbox();
   const image=viewer.querySelector(".image-lightbox-image");
   const caption=viewer.querySelector(".image-lightbox-caption");
+  imageLightboxTrigger=button;
   imageLightboxScale=null;
   image.src=button.dataset.imageSrc||"";
   image.alt=button.dataset.imageAlt||"";
@@ -311,6 +340,7 @@ function openImageLightbox(button){
   caption.hidden=!caption.textContent;
   viewer.hidden=false;
   document.body.classList.add("lightbox-open");
+  viewer.querySelector(".image-lightbox-close").focus({preventScroll:true});
 }
 
 /* Event delegation keeps gallery images clickable even after the SPA room re-renders. */
@@ -410,8 +440,8 @@ function renderTimelinePreview(media,entry){
     <span>${label}</span>
   </a>`;
 
-  return `<a class="timeline-preview" href="${entryUrl(entry)}" aria-label="${escapeHtml(pick(entry,"title"))}">
-    <img class="timeline-preview-backdrop" src="${escapeHtml(src)}" alt="" aria-hidden="true" loading="lazy">
+  return `<a class="timeline-preview${media.type==="video"?"":" timeline-preview-photo"}" href="${entryUrl(entry)}" aria-label="${escapeHtml(pick(entry,"title"))}">
+    ${media.type==="video"?`<img class="timeline-preview-backdrop" src="${escapeHtml(src)}" alt="" aria-hidden="true" loading="lazy">`:""}
     <img class="timeline-preview-image" src="${escapeHtml(src)}" alt="${escapeHtml(pick(media,"caption")||pick(entry,"title"))}" loading="lazy">
     <span class="timeline-preview-label">${label}</span>
   </a>`;
