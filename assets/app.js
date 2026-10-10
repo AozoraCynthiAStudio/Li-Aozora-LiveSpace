@@ -105,7 +105,7 @@ function routeSpace(){
     if(view==="timeline")renderTimeline(liveData);
     if(view==="gallery")renderGallery(liveData);
     if(view==="diary")renderDiary(liveData);
-    requestAnimationFrame(()=>hydrateVideoPreviews());
+    requestAnimationFrame(()=>{hydrateVideoPreviews();hydrateImageViewer();});
   }
 
   requestAnimationFrame(()=>{
@@ -166,14 +166,92 @@ function renderMedia(media,compact=false){
     </figure>`;
   }
 
-  return `<figure class="media-item ${compact?"compact":""}">
-    <div class="media-stage">
-      <img class="media-stage-backdrop" src="${src}" alt="" aria-hidden="true" loading="lazy">
-      <img class="media-visual" src="${src}" alt="${escapeHtml(caption||pick(media,"alt")||"LiveSpace image")}" loading="lazy">
-    </div>
+  const alt=pick(media,"alt")||caption||(currentLang==="en"?"LiveSpace image":"LiveSpace 照片");
+  const openLabel=currentLang==="en"?"Open full image":"放大查看照片";
+  const zoomHint=currentLang==="en"?"View larger":"查看大图";
+  return `<figure class="media-item media-item-image ${compact?"compact":""}">
+    <button class="media-image-button" type="button"
+      data-image-src="${src}"
+      data-image-alt="${escapeHtml(alt)}"
+      data-image-caption="${escapeHtml(caption||"")}"
+      aria-label="${escapeHtml(openLabel)}">
+      <img class="media-image-natural" src="${src}" alt="${escapeHtml(alt)}" loading="lazy">
+      <span class="media-zoom-hint" aria-hidden="true">↗ <span>${zoomHint}</span></span>
+    </button>
     ${!compact&&caption?`<figcaption>${escapeHtml(caption)}</figcaption>`:""}
     ${!compact?renderMemoryNote(media,false):""}
   </figure>`;
+}
+
+let imageLightbox=null;
+
+function ensureImageLightbox(){
+  if(imageLightbox)return imageLightbox;
+  const viewer=document.createElement("div");
+  viewer.className="image-lightbox";
+  viewer.hidden=true;
+  viewer.setAttribute("role","dialog");
+  viewer.setAttribute("aria-modal","true");
+  viewer.innerHTML=`
+    <button class="image-lightbox-close" type="button" aria-label="Close image viewer">×</button>
+    <div class="image-lightbox-scroller">
+      <figure>
+        <img class="image-lightbox-image" alt="">
+        <figcaption class="image-lightbox-caption"></figcaption>
+        <small class="image-lightbox-tip"></small>
+      </figure>
+    </div>`;
+  document.body.appendChild(viewer);
+
+  const image=viewer.querySelector(".image-lightbox-image");
+  const tip=viewer.querySelector(".image-lightbox-tip");
+  const close=()=>{
+    viewer.hidden=true;
+    viewer.classList.remove("is-actual");
+    document.body.classList.remove("lightbox-open");
+    image.removeAttribute("src");
+  };
+
+  viewer.querySelector(".image-lightbox-close").addEventListener("click",close);
+  viewer.addEventListener("click",event=>{
+    if(event.target===viewer||event.target.classList.contains("image-lightbox-scroller"))close();
+  });
+  image.addEventListener("click",event=>{
+    event.stopPropagation();
+    viewer.classList.toggle("is-actual");
+    tip.textContent=viewer.classList.contains("is-actual")
+      ?(currentLang==="en"?"Tap again to fit the screen":"再次点击适应屏幕")
+      :(currentLang==="en"?"Tap image for actual size":"再点图片查看原尺寸");
+  });
+  document.addEventListener("keydown",event=>{
+    if(event.key==="Escape"&&!viewer.hidden)close();
+  });
+
+  imageLightbox=viewer;
+  return viewer;
+}
+
+function openImageLightbox(button){
+  const viewer=ensureImageLightbox();
+  const image=viewer.querySelector(".image-lightbox-image");
+  const caption=viewer.querySelector(".image-lightbox-caption");
+  const tip=viewer.querySelector(".image-lightbox-tip");
+  viewer.classList.remove("is-actual");
+  image.src=button.dataset.imageSrc||"";
+  image.alt=button.dataset.imageAlt||"";
+  caption.textContent=button.dataset.imageCaption||"";
+  caption.hidden=!caption.textContent;
+  tip.textContent=currentLang==="en"?"Tap image for actual size":"再点图片查看原尺寸";
+  viewer.hidden=false;
+  document.body.classList.add("lightbox-open");
+}
+
+function hydrateImageViewer(root=document){
+  root.querySelectorAll(".media-image-button").forEach(button=>{
+    if(button.dataset.viewerBound==="1")return;
+    button.dataset.viewerBound="1";
+    button.addEventListener("click",()=>openImageLightbox(button));
+  });
 }
 
 function hydrateVideoPreviews(root=document){
@@ -440,7 +518,7 @@ function renderPage(data){
   if(page==="gallery")renderGallery(data);
   if(page==="diary")renderDiary(data);
   if(page==="entry")renderEntryPage(data);
-  requestAnimationFrame(()=>hydrateVideoPreviews());
+  requestAnimationFrame(()=>{hydrateVideoPreviews();hydrateImageViewer();});
 }
 
 document.querySelectorAll("[data-gallery-filter]").forEach(button=>{
