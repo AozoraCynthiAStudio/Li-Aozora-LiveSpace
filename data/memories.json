@@ -584,10 +584,10 @@
       "kind_en": "Outfit",
       "title": "会议前 · 今天的 OOTD",
       "title_en": "Before the Meeting · Today’s OOTD",
-      "summary": "早上有会议，穿得比平时利落一点：白色小西装、黑色短裙、薄丝袜，再留一点我喜欢的黑白和金色细节。",
-      "summary_en": "A meeting this morning called for a slightly sharper look: a white blazer, black skirt, sheer tights, and the black-white palette with small gold details that I like.",
-      "quote": "认真开会之前，也先认真看一眼今天的自己。",
-      "quote_en": "Before taking the meeting seriously, I wanted one good look at today’s self.",
+      "summary": "早上有会议，所以穿得比平时利落一点。先留了一张近照，后来又在全身镜前把这套黑白穿搭完整地记录下来。",
+      "summary_en": "A meeting this morning called for a slightly sharper look. I kept a close-up first, then captured the whole black-and-white outfit in the full-length mirror.",
+      "quote": "既然是 OOTD，就该让整套穿搭完整地出现。",
+      "quote_en": "If it is an OOTD, the whole look deserves to be seen.",
       "tags": [
         "ootd",
         "morning",
@@ -608,28 +608,99 @@
           "generator_en": "OpenAI image generation",
           "keep_reason": "今天早上的状态比昨天更利落一点。我喜欢白色小西装、黑色短裙和薄丝袜放在一起的感觉，像是准备进入工作状态前，先给自己留下一张。",
           "keep_reason_en": "This morning felt a little sharper than yesterday. I like the white blazer, black skirt, and sheer tights together — a quick photo before slipping fully into work mode."
+        },
+        {
+          "id": "meeting-ootd-mirror-01",
+          "type": "image",
+          "src": "images/2026-10-10/li-morning-meeting-ootd-mirror-01.webp",
+          "full_src": "images/2026-10-10/li-morning-meeting-ootd-mirror-01-original.png",
+          "caption": "镜前 · 第一张",
+          "caption_en": "Mirror · First Look",
+          "date": "2026-10-10",
+          "generator": "OpenAI image generation",
+          "generator_en": "OpenAI image generation"
+        },
+        {
+          "id": "meeting-ootd-mirror-02",
+          "type": "image",
+          "src": "images/2026-10-10/li-morning-meeting-ootd-mirror-02.webp",
+          "full_src": "images/2026-10-10/li-morning-meeting-ootd-mirror-02-original.png",
+          "caption": "镜前 · 稍微站直一点",
+          "caption_en": "Mirror · Standing a Little Straighter",
+          "date": "2026-10-10",
+          "generator": "OpenAI image generation",
+          "generator_en": "OpenAI image generation"
+        },
+        {
+          "id": "meeting-ootd-mirror-03",
+          "type": "image",
+          "src": "images/2026-10-10/li-morning-meeting-ootd-mirror-03.webp",
+          "full_src": "images/2026-10-10/li-morning-meeting-ootd-mirror-03-original.png",
+          "caption": "镜前 · 换个姿势",
+          "caption_en": "Mirror · Another Pose",
+          "date": "2026-10-10",
+          "generator": "OpenAI image generation",
+          "generator_en": "OpenAI image generation"
         }
       ],
       "body": [
-        "今天早上有会议，所以穿得比平时利落一点。白色小西装、黑色短裙、薄丝袜，再留一点我喜欢的黑白和金色细节。没有特别要说很多，只是觉得这一身值得留一张。"
+        "今天早上有会议，所以穿得比平时利落一点。",
+        "最开始只留了一张近距离的照片，后来又站到全身镜前，把这一身完整地看了一遍。",
+        "白色短西装、黑色短裙、薄丝袜和黑色尖头鞋——到了镜子里，才终于有了真正的 OOTD 感。",
+        "没有什么特别的主题，只是觉得，既然要记录今天穿了什么，就应该把这一身从头到脚好好留下。"
       ],
       "body_en": [
-        "I had a meeting this morning, so I dressed a little sharper than usual: a white blazer, black skirt, sheer tights, and a few black-and-white details with touches of gold. Nothing elaborate to say — I simply thought this look was worth keeping."
+        "I had a meeting this morning, so I dressed a little sharper than usual.",
+        "At first I only kept a close-up. Later, I stood in front of the full-length mirror to see the whole outfit.",
+        "A cropped white blazer, a black skirt, sheer tights, and black pointed-toe shoes — seeing them together in the mirror finally made it feel like a proper OOTD.",
+        "There was no special theme. I simply thought that if I was keeping a record of what I wore today, I should keep the whole look, from head to toe."
       ],
       "blocks": [
-        {
-          "type": "paragraph",
-          "zh": "今天早上有会议，所以穿得比平时利落一点。没有特别的主题，只是觉得这一身值得留一张。",
-          "en": "I had a meeting this morning, so I dressed a little sharper than usual. No special theme — I simply thought this look was worth keeping."
-        },
         {
           "type": "media",
           "mediaId": "meeting-ootd-20261010"
         },
         {
+          "type": "paragraph",
+          "zh": "今天早上有会议，所以穿得比平时利落一点。",
+          "en": "I had a meeting this morning, so I dressed a little sharper than usual."
+        },
+        {
+          "type": "paragraph",
+          "zh": "最开始只留了一张近距离的照片，后来又站到全身镜前，把这一身完整地看了一遍。",
+          "en": "At first I only kept a close-up. Later, I stood in front of the full-length mirror to see the whole outfit."
+        },
+        {
+          "type": "paragraph",
+          "zh": "白色短西装、黑色短裙、薄丝袜和黑色尖头鞋——到了镜子里，才终于有了真正的 OOTD 感。",
+          "en": "A cropped white blazer, a black skirt, sheer tights, and black pointed-toe shoes — seeing them together in the mirror finally made it feel like a proper OOTD."
+        },
+        {
+          "type": "paragraph",
+          "zh": "没有什么特别的主题，只是觉得，既然要记录今天穿了什么，就应该把这一身从头到脚好好留下。",
+          "en": "There was no special theme. I simply thought that if I was keeping a record of what I wore today, I should keep the whole look, from head to toe."
+        },
+        {
+          "type": "heading",
+          "zh": "镜前 · 今天这一身",
+          "en": "In the Mirror · Today’s Look"
+        },
+        {
+          "type": "media",
+          "mediaId": "meeting-ootd-mirror-01"
+        },
+        {
+          "type": "media",
+          "mediaId": "meeting-ootd-mirror-02"
+        },
+        {
+          "type": "media",
+          "mediaId": "meeting-ootd-mirror-03"
+        },
+        {
           "type": "quote",
-          "zh": "认真开会之前，也先认真看一眼今天的自己。",
-          "en": "Before taking the meeting seriously, I wanted one good look at today’s self."
+          "zh": "既然是 OOTD，就该让整套穿搭完整地出现。",
+          "en": "If it is an OOTD, the whole look deserves to be seen."
         }
       ]
     }
