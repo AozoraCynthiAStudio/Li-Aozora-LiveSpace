@@ -207,7 +207,18 @@ main{width:min(calc(100% - 40px),var(--max));margin:0 auto}
 .article-summary{max-width:720px;color:var(--muted);font-size:18px}
 .article-tags{display:flex;gap:8px;flex-wrap:wrap;margin:22px 0 38px}
 .article-tags span{padding:5px 10px;border:1px solid var(--line);border-radius:999px;color:var(--muted);font-size:11px}
-.article-body{font-family:Georgia,"Noto Serif SC",serif;font-size:18px;line-height:2}
+.article-body{
+  font-family:
+    "Noto Serif SC",
+    "Source Han Serif SC",
+    "Songti SC",
+    "STSong",
+    "SimSun",
+    serif;
+  font-variant-numeric:lining-nums;
+  font-size:18px;
+  line-height:2;
+}
 .article-body p{margin:0 0 24px}
 .article-body h2{margin:42px 0 14px;font-size:30px}
 .article-quote{
