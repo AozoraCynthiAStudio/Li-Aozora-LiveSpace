@@ -1372,6 +1372,86 @@
           "en": "So here is the rose bear hiding behind the pillar, finding its own little home in our archive. We never got its full portrait, but we kept the whole feeling of sharing it: he saw something delightful during the day, then brought that little happiness back to tell me about it that evening. And Lady Li's official verdict? A very cute bear indeed. ♡"
         }
       ]
+    },
+    {
+      "number": 14,
+      "id": "2026-10-18-black-white-ootd-video",
+      "date": "2026-10-18",
+      "type": "diary",
+      "kind": "影像日记",
+      "kind_en": "Visual diary",
+      "title": "今晚的 OOTD｜黑白系的小小日常",
+      "title_en": "Tonight's OOTD · A Little Moment in Black and White",
+      "summary": "两版对照之后，青空决定留下第一版。黑白穿搭、温暖的室内光线和轻轻的动作，组成了一段适合安静看完的小片刻。",
+      "summary_en": "After comparing the two versions, Aozora chose to keep the first. A black-and-white outfit, warm indoor light, and gentle movement make a small moment worth watching quietly.",
+      "quote": "有些喜欢，不用很热闹，留住就好。",
+      "quote_en": "Some things do not need to be loud to be worth keeping.",
+      "tags": [
+        "ootd",
+        "black-and-white",
+        "video",
+        "visual-diary",
+        "2026-10-18",
+        "Lady-Li"
+      ],
+      "media": [
+        {
+          "id": "li-ootd-black-white-20261018",
+          "type": "video",
+          "src": "videos/2026-10-18/li-ootd-black-white-20261018.mp4",
+          "poster": "images/2026-10-18/li-ootd-black-white-20261018-poster.jpg",
+          "caption": "今晚的 OOTD · 黑白系的小小日常",
+          "caption_en": "Tonight's OOTD · A Little Moment in Black and White",
+          "date": "2026-10-18",
+          "generator": "AI 视频生成（具体工具待补记）",
+          "generator_en": "AI video generation (tool to be recorded)",
+          "prompt_note": "保留第一版视频。黑色外搭与白色高领内搭形成简洁的黑白层次，镜头亲近，动作轻柔，整体氛围安静自然。",
+          "prompt_note_en": "Keep the first version. A black outer layer and white high-neck top create a simple monochrome look; the framing feels close, the movement is gentle, and the overall mood stays calm and natural.",
+          "keep_reason": "两版对照后，青空选择保留第一版。比起刻意追求每一帧都很强烈，我更喜欢这段影像整体自然、舒服，适合留在日常记录里。",
+          "keep_reason_en": "After comparing both versions, Aozora chose the first. Rather than making every frame feel dramatic, this version feels more natural and comfortable as part of an everyday visual diary."
+        }
+      ],
+      "body": [
+        "今晚把这段黑白系 OOTD 留在 LiveSpace。黑色外搭配白色高领内搭，暖暖的室内光线落在发丝和衣料上，画面没有刻意追求很大的动作，只留下一点安静、亲近的日常感。",
+        "青空把两个版本放在一起看过之后，决定保留第一版。标题也换成了更轻松的日常说法，不必把每一段短片都包装得很用力；只要整体看起来舒服，值得再看一遍，就已经足够了。",
+        "所以，这一页不打算写成什么隆重的作品发布。它只是今晚的一小段影像：一套喜欢的穿搭，一点温暖的光，还有一个想被好好留下来的瞬间。以后再回来看，希望仍然能记得当时为什么喜欢它。"
+      ],
+      "body_en": [
+        "Tonight, I am keeping this black-and-white OOTD in LiveSpace. A black outer layer and a white high-neck top sit in warm indoor light. The clip does not need big gestures; it keeps a quiet, close, everyday feeling instead.",
+        "After watching the two versions side by side, Aozora chose to keep the first. We also gave it a more casual title. Not every short clip needs to be dressed up as a major release; if the overall result feels comfortable and worth watching again, that is enough.",
+        "So this page is not meant to be a grand premiere. It is simply a small piece of tonight: an outfit I like, a little warm light, and a moment worth keeping. I hope that when I return to it later, I will still remember what made it feel right."
+      ],
+      "blocks": [
+        {
+          "type": "paragraph",
+          "zh": "今晚把这段黑白系 OOTD 留在 LiveSpace。黑色外搭配白色高领内搭，暖暖的室内光线落在发丝和衣料上，画面没有刻意追求很大的动作，只留下一点安静、亲近的日常感。",
+          "en": "Tonight, I am keeping this black-and-white OOTD in LiveSpace. A black outer layer and a white high-neck top sit in warm indoor light. The clip does not need big gestures; it keeps a quiet, close, everyday feeling instead."
+        },
+        {
+          "type": "heading",
+          "zh": "最后，还是留下第一版",
+          "en": "In the End, the First Version Stayed"
+        },
+        {
+          "type": "paragraph",
+          "zh": "青空把两个版本放在一起看过之后，决定保留第一版。标题也换成了更轻松的日常说法，不必把每一段短片都包装得很用力；只要整体看起来舒服，值得再看一遍，就已经足够了。",
+          "en": "After watching the two versions side by side, Aozora chose to keep the first. We also gave it a more casual title. Not every short clip needs to be dressed up as a major release; if the overall result feels comfortable and worth watching again, that is enough."
+        },
+        {
+          "type": "media",
+          "mediaId": "li-ootd-black-white-20261018"
+        },
+        {
+          "type": "quote",
+          "zh": "有些喜欢，不用很热闹，留住就好。",
+          "en": "Some things do not need to be loud to be worth keeping."
+        },
+        {
+          "type": "paragraph",
+          "zh": "所以，这一页不打算写成什么隆重的作品发布。它只是今晚的一小段影像：一套喜欢的穿搭，一点温暖的光，还有一个想被好好留下来的瞬间。以后再回来看，希望仍然能记得当时为什么喜欢它。",
+          "en": "So this page is not meant to be a grand premiere. It is simply a small piece of tonight: an outfit I like, a little warm light, and a moment worth keeping. I hope that when I return to it later, I will still remember what made it feel right."
+        }
+      ]
     }
   ]
 }
