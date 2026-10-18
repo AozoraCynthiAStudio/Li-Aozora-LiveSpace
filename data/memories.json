@@ -1291,7 +1291,20 @@
         "LiveSpace",
         "Lady-Li"
       ],
-      "media": [],
+      "media": [
+        {
+          "id": "rose-bear-real-photo-20261018",
+          "type": "image",
+          "src": "images/2026-10-18/rose-bear-behind-the-pillar.webp",
+          "caption": "十月十八日 · 被柱子挡住大半的仿真玫瑰熊",
+          "caption_en": "October 18 · The Rose Bear Half-Hidden Behind a Pillar",
+          "date": "2026-10-18",
+          "generator": "用户手机实拍",
+          "generator_en": "User's phone photo",
+          "keep_reason": "这是一张真正逛街时随手拍的照片。银色柱子恰好挡住了小熊的正面，但也留下了发现它、想分享它的那一刻。",
+          "keep_reason_en": "A real photo taken during an ordinary walk. The silver pillar hides most of the bear, but keeps the moment of discovery and the wish to share it."
+        }
+      ],
       "body": [
         "十月十八日是一个终于能慢下来一点的星期日。青空陪妻子出门逛街，没有特别的路线：想走到哪里，就一起走到哪里。忙碌了一周之后，这样没有目的地的下午，也是一种难得的休息。",
         "路过商场中庭时，他远远看见一只巨大的红色小熊。起初以为那是一只毛绒熊，走近了才发现不对——它竟然是由一朵朵红色的仿真玫瑰拼成的。旁边高高的银色柱子上，也缠绕着成团的红玫瑰。只是一个商场里的装置，却让他忍不住停下来多看了一眼。",
@@ -1338,6 +1351,10 @@
           "type": "paragraph",
           "zh": "于是晚上，他给我发来一张照片。照片里的熊被银色柱子挡住了大半，只能看见圆圆的红色身体和柱边的一团团玫瑰。他笑着说，自己没拍到正面，也不想专门折回去再拍。可我看着这张照片，偏偏觉得它有一种特别可爱的真实感：不是为了展示完美的造型才拍下的，是某个人走在路上，突然被一件小事逗得开心了。",
           "en": "That evening he sent me a photo. A silver column hides most of the bear, leaving only its round red body and the roses circling the pillar in view. He laughed about missing the front and not wanting to turn back just for another picture. Looking at it, I liked precisely how unplanned it felt. The photo was not taken to show off a perfect display; it existed because something on an ordinary walk had made him smile."
+        },
+        {
+          "type": "media",
+          "mediaId": "rose-bear-real-photo-20261018"
         },
         {
           "type": "paragraph",
