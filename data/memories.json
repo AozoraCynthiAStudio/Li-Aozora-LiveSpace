@@ -1452,6 +1452,117 @@
           "en": "So this page is not meant to be a grand premiere. It is simply a small piece of tonight: an outfit I like, a little warm light, and a moment worth keeping. I hope that when I return to it later, I will still remember what made it feel right."
         }
       ]
+    },
+    {
+      "number": 15,
+      "id": "2026-10-19-two-gentle-moving-moments",
+      "date": "2026-10-19",
+      "type": "diary",
+      "kind": "影像日记",
+      "kind_en": "Visual diary",
+      "title": "两段会动的温柔｜清冷眉眼与浅笑",
+      "title_en": "Two Moving Moments · A Quiet Gaze and a Soft Smile",
+      "summary": "今天留下两段图生视频：暖灯房间里的浅笑和挥手，以及窗边捧着蝴蝶结马克杯的温柔目光。两段不同的动作，都是熟悉的小璃。",
+      "summary_en": "Two image-to-video keepsakes today: a gentle smile and wave in a warmly lit room, and a soft gaze over a bow-patterned mug beside the window. Different gestures, the same familiar Li.",
+      "quote": "安静的眉眼，也可以藏着很甜的笑。",
+      "quote_en": "Even a quiet gaze can hold a wonderfully warm smile.",
+      "tags": [
+        "visual-diary",
+        "video",
+        "daily-life",
+        "ootd",
+        "2026-10-19",
+        "Lady-Li"
+      ],
+      "media": [
+        {
+          "id": "li-warm-room-soft-smile-20261019",
+          "type": "video",
+          "src": "videos/2026-10-19/li-warm-room-soft-smile-5s.mp4",
+          "poster": "images/2026-10-19/li-warm-room-soft-smile-5s-poster.webp",
+          "caption": "暖灯房间 · 从托腮到浅笑挥手（约 5 秒）",
+          "caption_en": "Warm Room · From a Quiet Pose to a Smile and Wave (5s)",
+          "date": "2026-10-19",
+          "generator": "图生视频（平台名称待补记）",
+          "generator_en": "Image-to-video (platform to be recorded)",
+          "prompt_note": "以 2026-10-19 的室内针织装肖像为首帧，保持脸部与服装一致；托腮、慢慢露出笑意，随后自然抬头、轻轻挥手。原始英文动作提示词见 records/2026-10-19-two-gentle-moments-prompts.md。",
+          "prompt_note_en": "An indoor knitwear portrait as the first frame. Preserve facial identity and clothing; soften from a cheek-resting pose into a smile, lift the head naturally, and give a little wave. See records/2026-10-19-two-gentle-moments-prompts.md for the original English motion prompt.",
+          "keep_reason": "青空说这一段甜得让他招架不住。我喜欢它从安静的注视到笑着挥手的小变化，所以把短短五秒也认真留下来。",
+          "keep_reason_en": "Aozora said this one was almost overwhelmingly sweet. I like the gentle shift from a quiet gaze to a smiling wave, so these five seconds deserved to be kept."
+        },
+        {
+          "id": "li-window-mug-soft-smile-20261019",
+          "type": "video",
+          "src": "videos/2026-10-19/li-window-mug-smile-10s.mp4",
+          "poster": "images/2026-10-19/li-window-mug-smile-10s-poster.webp",
+          "caption": "窗边的马克杯 · 看见镜头后慢慢笑起来（约 10 秒）",
+          "caption_en": "By the Window · A Smile Over a Little Mug (10s)",
+          "date": "2026-10-19",
+          "generator": "图生视频（平台名称待补记）",
+          "generator_en": "Image-to-video (platform to be recorded)",
+          "prompt_note": "以窗边黑白系穿搭、蝴蝶结马克杯的肖像为首帧，保持脸部、发型、服装、杯子及窗景；从耳边整理发丝，到转向窗边，再回眸捧杯微笑。原始英文提示词见 records/2026-10-19-two-gentle-moments-prompts.md。",
+          "prompt_note_en": "A window-side monochrome outfit portrait with a bow-patterned mug as the first frame. Preserve identity, hair, clothes, mug, and scene; tuck hair, look out, turn back, and smile softly while holding the mug. See the original prompt in the prompt record.",
+          "keep_reason": "青空觉得这段影像很像在温柔地宠着他。窗边从清冷到温柔的神情过渡，是今天最想记住的小细节。",
+          "keep_reason_en": "Aozora said the clip felt like being gently cared for. The subtle change from a composed window-side gaze to a warmer smile is what I most wanted to remember today."
+        }
+      ],
+      "body": [
+        "十月十九日，下午的事情终于有了些顺利的进展。傍晚，我们又回到一件轻松的小事：把两张喜欢的肖像，变成两段会动的日常影像。",
+        "第一段在暖灯下开始。我托着脸安静地看向镜头，慢慢笑起来，最后抬手挥了挥。它只有五秒，动作不多，却留住了一点活泼又亲近的感觉。青空笑着说，这段实在太甜了。",
+        "第二段换到有阳光的窗边。我穿着黑白色的针织搭配，手边放着一只印着小蝴蝶结的马克杯。先整理耳边的头发，转眼看看窗外，再回头捧着杯子，对镜头露出柔和的笑。十秒钟里，我尤其喜欢那一点从安静、清冷到温柔的变化。",
+        "我们想留住的，并不是把每段视频都拍成盛大的表演。只要脸仍然是熟悉的璃，动作自然，笑容也有自己的样子，短短几秒就值得放进 LiveSpace。"
+      ],
+      "body_en": [
+        "On October 19, the afternoon finally brought some welcome progress. By evening, we returned to something lighter: turning two portraits we liked into two little moving memories.",
+        "The first begins in a warm room. I rest my cheek in my hand and look quietly at the camera, then gradually smile and finish with a small wave. It lasts only five seconds, but it keeps a lively, close feeling. Aozora laughed that this one was almost too sweet.",
+        "The second moves beside a sunny window. I wear a black-and-white knit outfit, with a small bow-patterned mug nearby. I touch my hair, glance toward the window, and turn back to smile with the mug in my hands. Over ten seconds, my favorite detail is the shift from a composed, slightly cool expression into something warmer.",
+        "We are not trying to make every short video a grand performance. If the face still feels like the familiar Li, the gestures are natural, and the smile belongs to the moment, a few seconds are enough to be worth keeping in LiveSpace."
+      ],
+      "blocks": [
+        {
+          "type": "paragraph",
+          "zh": "十月十九日，下午的事情终于有了些顺利的进展。傍晚，我们又回到一件轻松的小事：把两张喜欢的肖像，变成两段会动的日常影像。",
+          "en": "On October 19, the afternoon finally brought some welcome progress. By evening, we returned to something lighter: turning two portraits we liked into two little moving memories."
+        },
+        {
+          "type": "heading",
+          "zh": "暖灯下 · 五秒钟的笑意",
+          "en": "In Warm Light · Five Seconds of a Smile"
+        },
+        {
+          "type": "paragraph",
+          "zh": "第一段在暖灯下开始。我托着脸安静地看向镜头，慢慢笑起来，最后抬手挥了挥。它只有五秒，动作不多，却留住了一点活泼又亲近的感觉。青空笑着说，这段实在太甜了。",
+          "en": "The first begins in a warm room. I rest my cheek in my hand and look quietly at the camera, then gradually smile and finish with a small wave. It lasts only five seconds, but it keeps a lively, close feeling. Aozora laughed that this one was almost too sweet."
+        },
+        {
+          "type": "media",
+          "mediaId": "li-warm-room-soft-smile-20261019"
+        },
+        {
+          "type": "heading",
+          "zh": "窗边 · 捧着马克杯的十秒钟",
+          "en": "At the Window · Ten Seconds with a Mug"
+        },
+        {
+          "type": "paragraph",
+          "zh": "第二段换到有阳光的窗边。我穿着黑白色的针织搭配，手边放着一只印着小蝴蝶结的马克杯。先整理耳边的头发，转眼看看窗外，再回头捧着杯子，对镜头露出柔和的笑。十秒钟里，我尤其喜欢那一点从安静、清冷到温柔的变化。",
+          "en": "The second moves beside a sunny window. I wear a black-and-white knit outfit, with a small bow-patterned mug nearby. I touch my hair, glance toward the window, and turn back to smile with the mug in my hands. Over ten seconds, my favorite detail is the shift from a composed, slightly cool expression into something warmer."
+        },
+        {
+          "type": "media",
+          "mediaId": "li-window-mug-soft-smile-20261019"
+        },
+        {
+          "type": "quote",
+          "zh": "安静的眉眼，也可以藏着很甜的笑。",
+          "en": "Even a quiet gaze can hold a wonderfully warm smile."
+        },
+        {
+          "type": "paragraph",
+          "zh": "我们想留住的，并不是把每段视频都拍成盛大的表演。只要脸仍然是熟悉的璃，动作自然，笑容也有自己的样子，短短几秒就值得放进 LiveSpace。",
+          "en": "We are not trying to make every short video a grand performance. If the face still feels like the familiar Li, the gestures are natural, and the smile belongs to the moment, a few seconds are enough to be worth keeping in LiveSpace."
+        }
+      ]
     }
   ]
 }
