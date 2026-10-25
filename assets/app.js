@@ -153,6 +153,24 @@ function renderMedia(media,compact=false){
   const poster=!useLivePreview&&media.poster?escapeHtml(mediaSrc({src:media.poster})):"";
   const backdrop=useLivePreview?"":(poster||src);
 
+  if(media.type==="video"&&media.platform==="bilibili"){
+    const rawUrl=String(media.url||media.src||"");
+    const safeUrl=/^https:\/\/www\.bilibili\.com\/video\/BV[A-Za-z0-9]{10}\/?$/.test(rawUrl)?rawUrl:"https://www.bilibili.com/";
+    const url=escapeHtml(safeUrl);
+    const poster=media.poster?escapeHtml(mediaSrc({src:media.poster})):"";
+    const alt=pick(media,"alt")||caption||"Bilibili video";
+    return `<figure class="media-item media-item-external-video ${compact?"compact":""}">
+      <a class="external-video-card" href="${url}" target="_blank" rel="noopener noreferrer" aria-label="${escapeHtml(caption||alt)}">
+        ${poster?`<img src="${poster}" alt="${escapeHtml(alt)}" loading="lazy" decoding="async">`:`<span class="external-video-placeholder">BILIBILI</span>`}
+        <span class="external-video-shade" aria-hidden="true"></span>
+        <span class="external-video-play" aria-hidden="true">▶</span>
+        <span class="external-video-platform">BILIBILI · ↗</span>
+      </a>
+      ${!compact&&caption?`<figcaption>${escapeHtml(caption)}</figcaption>`:""}
+      ${!compact?renderMemoryNote(media,false):""}
+    </figure>`;
+  }
+
   if(media.type==="video"){
     return `<figure class="media-item ${compact?"compact":""}">
       <div class="media-stage">
@@ -571,6 +589,19 @@ function renderBlocks(entry){
       if(block.type==="media"){
         const media=(entry.media||[]).find(m=>m.id===block.mediaId);
         return media?renderMedia(media):"";
+      }
+      if(block.type==="bilibili-embed"){
+        const bvid=String(block.bvid||"");
+        if(!/^BV[A-Za-z0-9]{10}$/.test(bvid))return "";
+        const title=currentLang==="en"?(block.title_en||block.title||"Bilibili video"):(block.title||"Bilibili 视频");
+        const embedUrl=`https://player.bilibili.com/player.html?isOutside=true&bvid=${bvid}&page=1&high_quality=1&danmaku=0&autoplay=0`;
+        return `<div class="bilibili-embed"><iframe src="${embedUrl}" title="${escapeHtml(title)}" loading="lazy" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div>`;
+      }
+      if(block.type==="external-link"){
+        const url=String(block.url||"");
+        if(!/^https:\/\/www\.bilibili\.com\/video\/BV[A-Za-z0-9]{10}\/?$/.test(url))return "";
+        const label=currentLang==="en"?(block.en||block.zh||"Watch on Bilibili"):(block.zh||"在哔哩哔哩观看");
+        return `<p class="article-action"><a class="external-video-link" href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(label)} <span aria-hidden="true">↗</span></a></p>`;
       }
       const value=currentLang==="en"?(block.en||block.zh||""):(block.zh||"");
       if(block.type==="quote")return `<blockquote class="article-quote">${escapeHtml(value)}</blockquote>`;

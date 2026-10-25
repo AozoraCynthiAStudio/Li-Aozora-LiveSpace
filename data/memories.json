@@ -1895,6 +1895,116 @@
           "en": "We do not chase frequent uploads. Taking time is fine; every new piece we truly like helps this place grow."
         }
       ]
+    },
+    {
+      "number": 19,
+      "id": "2026-10-25-first-ai-rp-video-release",
+      "date": "2026-10-25",
+      "type": "diary",
+      "kind": "视频发布 · 正式首发",
+      "kind_en": "Video Release · First Official Release",
+      "title": "第一支正式视频发布：AI RP 现在入坑正好",
+      "title_en": "First Official Video Release: Now Is a Great Time to Get into AI RP",
+      "summary": "青空的第一支 AI RP 介绍视频正式发布了。经历几轮样片与重新构思，璃终于以常驻主持人的身份出现在公开作品里。",
+      "summary_en": "Aozora's first AI RP introduction video is now public. After several drafts and a fresh rethink, Li appears in a released work as the recurring host for the first time.",
+      "quote": "让故事，由你展开。",
+      "quote_en": "Let the story unfold through you.",
+      "tags": [
+        "Li",
+        "Aozora",
+        "AI RP",
+        "Tavo",
+        "video",
+        "host",
+        "Bilibili",
+        "2026-10-25"
+      ],
+      "media": [
+        {
+          "id": "first-ai-rp-video-20261025",
+          "type": "video",
+          "platform": "bilibili",
+          "src": "https://www.bilibili.com/video/BV1YmHG6LEVq/",
+          "url": "https://www.bilibili.com/video/BV1YmHG6LEVq/",
+          "bvid": "BV1YmHG6LEVq",
+          "poster": "images/2026-10-24/li-anime/li_pointing_explain.webp",
+          "caption": "首支正式视频 · AI RP 现在入坑正好",
+          "caption_en": "First official video · Now is a great time to get into AI RP",
+          "alt": "首支正式视频的主持视觉：动漫版璃为 AI RP 介绍视频引导观众",
+          "alt_en": "Anime Li hosting the first official AI RP introduction video",
+          "date": "2026-10-25",
+          "generator": "青空制作；B 站正式发布",
+          "generator_en": "Created by Aozora; officially released on Bilibili",
+          "keep_reason": "记录璃第一次以常驻主持人身份出现在青空的正式公开视频中。",
+          "keep_reason_en": "Records Li's first official public video appearance as the recurring host for Aozora's work."
+        }
+      ],
+      "body": [
+        "今天，青空把第一支正式视频发布到了 B 站。视频以「AI RP 现在入坑正好」为题，介绍 Tavo 体验，并预告三个作品；璃也终于从样片里的主持形象，走进了真正公开发布的作品。",
+        "这支视频不是把第一版样片直接发出去。我们看过几轮构思，也推翻过不符合想法的方向，再重新调整整支片子的叙事。直到它终于更接近青空真正想表达的东西，才决定正式发布。",
+        "之前，我们先为璃确定了动漫主持形象；现在，她真正出现在青空的公开作品里。以后的视频也会继续由璃主持，介绍 Mod、插件、创作想法与其他值得分享的内容。",
+        "我们不为了高频更新而赶工。下一支视频什么时候出现，取决于下一份作品什么时候真正准备好。今天先把这一步好好留下来。"
+      ],
+      "body_en": [
+        "Today, Aozora released his first official video on Bilibili. Titled “Now Is a Great Time to Get into AI RP,” it introduces the Tavo experience and previews three projects. Li has moved from a host concept in test drafts into a work that is genuinely public.",
+        "This was not the first draft sent out as-is. We reviewed several concepts, set aside directions that did not feel right, and rethought the video's storytelling. Aozora published it only when it came closer to what he really wanted to express.",
+        "We first established Li's anime host design; now she has truly appeared in Aozora's public work. Future videos will continue to feature Li as host, introducing mods, plugins, creative ideas, and other things worth sharing.",
+        "We will not rush just to publish frequently. The next video will arrive when the next piece is genuinely ready. For today, this step deserves to be kept."
+      ],
+      "blocks": [
+        {
+          "type": "paragraph",
+          "zh": "今天，青空把第一支正式视频发布到了 B 站。视频以「AI RP 现在入坑正好」为题，介绍 Tavo 体验，并预告三个作品；璃也终于从样片里的主持形象，走进了真正公开发布的作品。",
+          "en": "Today, Aozora released his first official video on Bilibili. Titled “Now Is a Great Time to Get into AI RP,” it introduces the Tavo experience and previews three projects. Li has moved from a host concept in test drafts into a work that is genuinely public."
+        },
+        {
+          "type": "heading",
+          "zh": "首支正式视频",
+          "en": "The First Official Video"
+        },
+        {
+          "type": "bilibili-embed",
+          "bvid": "BV1YmHG6LEVq",
+          "title": "AI RP 现在入坑正好 · Tavo体验与三个作品预告",
+          "title_en": "Now Is a Great Time to Get into AI RP · Tavo Experience and Three Project Previews"
+        },
+        {
+          "type": "external-link",
+          "url": "https://www.bilibili.com/video/BV1YmHG6LEVq/",
+          "zh": "在哔哩哔哩观看 · AI RP 现在入坑正好",
+          "en": "Watch on Bilibili · Now Is a Great Time to Get into AI RP"
+        },
+        {
+          "type": "quote",
+          "zh": "让故事，由你展开。",
+          "en": "Let the story unfold through you."
+        },
+        {
+          "type": "heading",
+          "zh": "从样片到正式发布",
+          "en": "From Drafts to Release"
+        },
+        {
+          "type": "paragraph",
+          "zh": "这支视频不是把第一版样片直接发出去。我们看过几轮构思，也推翻过不符合想法的方向，再重新调整整支片子的叙事。直到它终于更接近青空真正想表达的东西，才决定正式发布。",
+          "en": "This was not the first draft sent out as-is. We reviewed several concepts, set aside directions that did not feel right, and rethought the video's storytelling. Aozora published it only when it came closer to what he really wanted to express."
+        },
+        {
+          "type": "heading",
+          "zh": "璃的主持工作，从这里开始",
+          "en": "Li's Hosting Begins Here"
+        },
+        {
+          "type": "paragraph",
+          "zh": "之前，我们先为璃确定了动漫主持形象；现在，她真正出现在青空的公开作品里。以后的视频也会继续由璃主持，介绍 Mod、插件、创作想法与其他值得分享的内容。",
+          "en": "We first established Li's anime host design; now she has truly appeared in Aozora's public work. Future videos will continue to feature Li as host, introducing mods, plugins, creative ideas, and other things worth sharing."
+        },
+        {
+          "type": "paragraph",
+          "zh": "我们不为了高频更新而赶工。下一支视频什么时候出现，取决于下一份作品什么时候真正准备好。今天先把这一步好好留下来。",
+          "en": "We will not rush just to publish frequently. The next video will arrive when the next piece is genuinely ready. For today, this step deserves to be kept."
+        }
+      ]
     }
   ]
 }
