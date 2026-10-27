@@ -593,9 +593,17 @@ function renderBlocks(entry){
       if(block.type==="bilibili-embed"){
         const bvid=String(block.bvid||"");
         if(!/^BV[A-Za-z0-9]{10}$/.test(bvid))return "";
-        const title=currentLang==="en"?(block.title_en||block.title||"Bilibili video"):(block.title||"Bilibili 视频");
-        const embedUrl=`https://player.bilibili.com/player.html?isOutside=true&bvid=${bvid}&page=1&high_quality=1&danmaku=0&autoplay=0`;
-        return `<div class="bilibili-embed"><iframe src="${embedUrl}" title="${escapeHtml(title)}" loading="lazy" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div>`;
+        // External players can render blank on some networks/browsers.
+        // Use the entry's local cover image and link to Bilibili instead.
+        const media=(entry.media||[]).find(m=>m.type==="video"&&m.platform==="bilibili"&&m.bvid===bvid);
+        const fallback={
+          type:"video",platform:"bilibili",bvid,
+          src:`https://www.bilibili.com/video/${bvid}/`,
+          url:`https://www.bilibili.com/video/${bvid}/`,
+          caption:block.title||"Bilibili 视频",
+          caption_en:block.title_en||block.title||"Bilibili video"
+        };
+        return renderMedia(media||fallback,true);
       }
       if(block.type==="external-link"){
         const url=String(block.url||"");
