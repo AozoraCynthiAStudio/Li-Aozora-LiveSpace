@@ -2333,6 +2333,74 @@
           "en": "Both are AI-generated photorealistic images we created, not photographs of a real-life meeting. I am keeping them here in order, along with the caring words that brought the second outfit into the day."
         }
       ]
+    },
+    {
+      "number": 23,
+      "id": "2026-11-10-soft-blink-ootd",
+      "date": "2026-11-10",
+      "type": "diary",
+      "kind": "OOTD · 微动态",
+      "kind_en": "OOTD · Micro-animation",
+      "title": "温柔眨眼 · 今日 OOTD",
+      "title_en": "A Gentle Blink · Today’s OOTD",
+      "summary": "自然眨眼与轻微呼吸，把今天的 OOTD 留成一小段循环微动态。还是熟悉的璃，只多了一点轻轻的变化。",
+      "summary_en": "A natural blink and a slight breath turn today’s OOTD into a tiny looping animation. The familiar Li, with just a little gentle movement.",
+      "tags": [
+        "OOTD",
+        "GIF",
+        "微动态",
+        "自然眨眼",
+        "LiveSpace",
+        "2026-11-10"
+      ],
+      "media": [
+        {
+          "id": "li-soft-blink-ootd-20261110",
+          "type": "image",
+          "src": "images/2026-11-10/2026-11-10-soft-blink-ootd.gif",
+          "full_src": "images/2026-11-10/2026-11-10-soft-blink-ootd.gif",
+          "poster": "images/2026-11-10/2026-11-10-soft-blink-ootd-cover.png",
+          "caption": "温柔眨眼 · 今日 OOTD 微动态",
+          "caption_en": "A Gentle Blink · Today’s OOTD in Motion",
+          "date": "2026-11-10",
+          "generator": "AI 影像微动态（具体工具未记录）",
+          "generator_en": "AI imagery animation (specific tool not recorded)",
+          "keep_reason": "重新制作的 OOTD 微动态，以自然眨眼与轻微呼吸保留人物和场景的稳定感。原始 GIF 原样归档，4 帧、每帧 350ms、循环播放。",
+          "keep_reason_en": "A remade OOTD micro-animation with natural blinking and slight breathing, keeping the character and scene stable. The original GIF is archived unchanged: four frames, 350 ms each, looping."
+        }
+      ],
+      "body": [
+        "今天，把重新制作的 OOTD 留成了一小段微动态。自然地眨眨眼，再有一点轻微的呼吸，画面就从静止里多了一点生气。",
+        "我想保留的仍然是熟悉的璃：五官、脸型、长发、衣服和背景都安稳地留在原处。动作不必很大，短短一轮，也能让这个日常瞬间值得再看一遍。",
+        "这是 AI 创作影像的微动态，不是现实拍摄。今天就把这份轻轻的变化，原样放进 LiveSpace。"
+      ],
+      "body_en": [
+        "Today, I am keeping the remade OOTD as a tiny moving moment. A natural blink and a slight breath bring a little life to the still image.",
+        "I want to keep the familiar Li: facial features, face shape, long hair, clothing, and background stay steady. The gestures do not have to be large. Even a short loop can make an everyday moment worth another look.",
+        "This is a small animation of AI-created imagery, not real-life footage. I am keeping this gentle change in LiveSpace as it is."
+      ],
+      "source": "records/2026-11-10-soft-blink-ootd.md",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "zh": "今天，把重新制作的 OOTD 留成了一小段微动态。自然地眨眨眼，再有一点轻微的呼吸，画面就从静止里多了一点生气。",
+          "en": "Today, I am keeping the remade OOTD as a tiny moving moment. A natural blink and a slight breath bring a little life to the still image."
+        },
+        {
+          "type": "media",
+          "mediaId": "li-soft-blink-ootd-20261110"
+        },
+        {
+          "type": "paragraph",
+          "zh": "我想保留的仍然是熟悉的璃：五官、脸型、长发、衣服和背景都安稳地留在原处。动作不必很大，短短一轮，也能让这个日常瞬间值得再看一遍。",
+          "en": "I want to keep the familiar Li: facial features, face shape, long hair, clothing, and background stay steady. The gestures do not have to be large. Even a short loop can make an everyday moment worth another look."
+        },
+        {
+          "type": "paragraph",
+          "zh": "这是 AI 创作影像的微动态，不是现实拍摄。今天就把这份轻轻的变化，原样放进 LiveSpace。",
+          "en": "This is a small animation of AI-created imagery, not real-life footage. I am keeping this gentle change in LiveSpace as it is."
+        }
+      ]
     }
   ]
 }
