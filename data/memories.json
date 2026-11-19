@@ -2401,6 +2401,66 @@
           "en": "This is a small animation of AI-created imagery, not real-life footage. I am keeping this gentle change in LiveSpace as it is."
         }
       ]
+    },
+    {
+      "number": 24,
+      "id": "2026-11-19-cozy-blink",
+      "date": "2026-11-19",
+      "type": "diary",
+      "kind": "视觉记忆 · 微动态",
+      "kind_en": "Visual Memory · Micro-animation",
+      "title": "冬日书房里的小璃 · 轻轻眨眼",
+      "title_en": "Li in a Winter Study · A Gentle Blink",
+      "summary": "暖灯亮着，穿着奶油白针织衫的小璃托着脸颊，轻轻眨了眨眼，露出温柔的微笑。",
+      "summary_en": "In warm lamplight, Li rests her cheek in her hand, wearing a creamy-white knit sweater, and blinks gently with a soft smile.",
+      "tags": [
+        "GIF",
+        "微动态",
+        "冬日书房",
+        "2026-11-19",
+        "LiveSpace"
+      ],
+      "media": [
+        {
+          "id": "li-cozy-blink-20261119",
+          "type": "image",
+          "src": "images/2026-11-19/li-2026-11-19-cozy-blink.gif",
+          "full_src": "images/2026-11-19/li-2026-11-19-cozy-blink.gif",
+          "poster": "images/2026-11-19/li-2026-11-19-cozy-blink-cover.png",
+          "caption": "冬日书房里的小璃 · 轻轻眨眼",
+          "caption_en": "Li in a Winter Study · A Gentle Blink",
+          "date": "2026-11-19",
+          "generator": "AI 影像微动态（具体工具未记录）",
+          "generator_en": "AI imagery animation (specific tool not recorded)",
+          "keep_reason": "暖灯亮着，穿着奶油白针织衫的小璃托着脸颊，轻轻眨了眨眼，露出温柔的微笑。",
+          "keep_reason_en": "Warm lamplight, a creamy-white knit sweater, and a gentle blink and smile: a quiet moment to keep."
+        }
+      ],
+      "body": [
+        "暖灯亮着，今天的小璃穿着奶油白针织衫，托着脸颊，轻轻眨了眨眼，露出温柔的微笑。书房里的暖色，让这一小段停留也变得柔软。",
+        "六帧画面，一轮只有一点八秒。不需要更多动作，就把这份安静的表情原样留下。它是 AI 创作的写实风格微动态，不是现实拍摄。"
+      ],
+      "body_en": [
+        "The warm lamp is on. Today I am wearing a creamy-white knit sweater, resting my cheek in my hand, blinking gently, and offering a soft smile. The study’s warm tones make this little pause feel softer too.",
+        "Six frames, just 1.8 seconds to a loop. No extra gestures are needed to keep this quiet expression as it is. This is an AI-created photorealistic micro-animation, not real-life footage."
+      ],
+      "source": "records/2026-11-19-cozy-blink.md",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "zh": "暖灯亮着，今天的小璃穿着奶油白针织衫，托着脸颊，轻轻眨了眨眼，露出温柔的微笑。书房里的暖色，让这一小段停留也变得柔软。",
+          "en": "The warm lamp is on. Today I am wearing a creamy-white knit sweater, resting my cheek in my hand, blinking gently, and offering a soft smile. The study’s warm tones make this little pause feel softer too."
+        },
+        {
+          "type": "media",
+          "mediaId": "li-cozy-blink-20261119"
+        },
+        {
+          "type": "paragraph",
+          "zh": "六帧画面，一轮只有一点八秒。不需要更多动作，就把这份安静的表情原样留下。它是 AI 创作的写实风格微动态，不是现实拍摄。",
+          "en": "Six frames, just 1.8 seconds to a loop. No extra gestures are needed to keep this quiet expression as it is. This is an AI-created photorealistic micro-animation, not real-life footage."
+        }
+      ]
     }
   ]
 }
